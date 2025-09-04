@@ -1,5 +1,7 @@
 @use 'sass:map';
-@use './colors';
+
+@use './breakpoints.module';
+@use './colors.module';
 
 $radius: (
   small: (
@@ -357,7 +359,7 @@ $shadows: (
   @each $name, $value in $radius {
     --radius-#{$name}: #{map.get($value, mobile)};
 
-    @media (min-width: 576px) {
+    @include breakpoints.media-breakpoint-up(sm) {
       --radius-#{$name}: #{map.get($value, base)};
     }
   }
@@ -365,7 +367,7 @@ $shadows: (
   @each $name, $value in $spacing {
     --spacing-#{$name}: #{map.get($value, mobile)};
 
-    @media (min-width: 576px) {
+    @include breakpoints.media-breakpoint-up(sm) {
       --spacing-#{$name}: #{map.get($value, base)};
     }
   }
