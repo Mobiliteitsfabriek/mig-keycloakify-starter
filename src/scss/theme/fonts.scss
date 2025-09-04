@@ -8,3 +8,14 @@
     url('../../assets/fonts/inter/Inter.woff') format('woff'),
     url('../../assets/fonts/inter/Inter.ttf') format('truetype');
 }
+
+@font-face {
+  font-display: swap;
+  font-family: SperwerMS;
+  font-weight: 700;
+  src:
+    local('SperwerMS'),
+    url('../../assets/fonts/sperwer/SperwerMS-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/sperwer/SperwerMS-Bold.woff') format('woff'),
+    url('../../assets/fonts/sperwer/SperwerMS-Bold.ttf') format('truetype');
+}
