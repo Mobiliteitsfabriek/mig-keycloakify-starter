@@ -39,7 +39,12 @@ export default function KcPage(props: { kcContext: KcContext }) {
   );
 }
 
-const classes = {} satisfies { [key in ClassKey]?: string };
+const classes = {
+  kcButtonClass: '',
+  kcButtonPrimaryClass: '',
+  kcButtonBlockClass: '',
+  kcButtonLargeClass: ''
+} satisfies { [key in ClassKey]?: string };
 
 function useCustomCss(kcContext: KcContext) {
   useMemo(() => {

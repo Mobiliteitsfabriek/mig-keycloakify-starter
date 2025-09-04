@@ -1,3 +1,8 @@
 @use '../scss/theme/fonts.scss';
 @use '../scss/theme/tokens.scss';
 @use '../scss/theme/globals.scss';
+
+@use '../scss/components/button.scss';
+
+// page specific overrides
+@use '../scss/pages/login.scss';

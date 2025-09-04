@@ -167,8 +167,12 @@ $indicator-content-colors: (
 
 $interactive-background-colors: (
   'primary': (
-    base: colors.$bluegray-900,
+    base: colors.$bluegray-800,
     dark: colors.$white
+  ),
+  'primaryhover': (
+    base: colors.$bluegray-900,
+    dark: colors.$bluegray-50
   ),
   'primaryinverse': (
     base: colors.$white,
