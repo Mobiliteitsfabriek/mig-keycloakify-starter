@@ -1,5 +1,7 @@
 // for this project we use a mobile first approach
 
+@use 'sass:map';
+
 /*
 * Map below displays the minimum width for each size, using the following logic
 * xs: 0-576px
@@ -24,7 +26,7 @@ $breakpoints: (
 *   576px
 */
 @function breakpoint-min($name) {
-  $min: map-get($breakpoints, $name);
+  $min: map.get($breakpoints, $name);
 
   @return if($min != 0, $min, null);
 }
