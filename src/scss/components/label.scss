@@ -1,0 +1,7 @@
+@use '../theme/typography.module';
+
+.kcLabelClass {
+  @include typography.h2;
+  display: block;
+  margin: 0 0 var(--spacing-small);
+}

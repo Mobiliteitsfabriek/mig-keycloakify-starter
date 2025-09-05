@@ -1,0 +1,33 @@
+@use '../theme/typography.module.scss';
+
+.kcInputClass {
+  @include typography.body-2;
+  background: var(--color-input-background-primary);
+  border: 1px solid var(--color-input-border-primary);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-tiny);
+  height: 40px;
+  padding: var(--spacing-medium);
+  width: 100%;
+
+  &:has(+ .kcFormPasswordVisibilityButtonClass) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.kcFormPasswordVisibilityButtonClass {
+  background: var(--color-input-background-primary);
+  border: 1px solid var(--color-input-border-primary);
+  border-left: 0;
+  border-top-right-radius: var(--radius-medium);
+  border-bottom-right-radius: var(--radius-medium);
+  height: 40px;
+  padding: 0 var(--spacing-large);
+
+  .kcFormPasswordVisibilityIconShow,
+  .kcFormPasswordVisibilityIconHide {
+    font-size: 16px;
+    padding: 4px 0 0 0;
+  }
+}

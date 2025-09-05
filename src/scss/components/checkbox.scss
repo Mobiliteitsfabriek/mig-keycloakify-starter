@@ -1,0 +1,46 @@
+@use '../theme/typography.module';
+
+.checkbox {
+  label {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-medium);
+  }
+
+  input[type='checkbox'] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    content: none;
+  }
+
+  input[type='checkbox']:before {
+    background: var(--color-input-background-primary);
+    border: 2px solid var(--color-input-border-primary);
+    border-radius: var(--radius-small);
+    color: transparent;
+    content: '';
+    display: block;
+    font-size: 16px;
+    height: 20px;
+    line-height: 1;
+    text-align: center;
+    width: 20px;
+  }
+
+  input[type='checkbox']:checked:before {
+    background: var(--color-interactive-content-secondary);
+    border-color: var(--color-interactive-content-secondary);
+    color: var(--color-interactive-content-primary);
+    content: '✓';
+  }
+
+  span {
+    @include typography.body-2;
+    color: var(--color-content-primary);
+    margin-left: var(--spacing-medium);
+    padding-top: 4px;
+  }
+}

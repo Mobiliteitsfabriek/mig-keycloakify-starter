@@ -3,6 +3,9 @@
 @use '../scss/theme/globals.scss';
 
 @use '../scss/components/button.scss';
+@use '../scss/components/checkbox.scss';
+@use '../scss/components/input.scss';
+@use '../scss/components/label.scss';
 
 // page specific overrides
 @use '../scss/pages/login.scss';
