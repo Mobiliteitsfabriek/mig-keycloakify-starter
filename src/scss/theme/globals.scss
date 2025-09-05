@@ -1,4 +1,24 @@
+@use './breakpoints.module';
+@use './colors.module';
+
 body {
-  font-family: Inter, sans-serif;
+  background: colors.$white;
   color: var(--color-content-primary);
+  font-family: Inter, sans-serif;
+
+  &:after {
+    @include breakpoints.media-breakpoint-up(md) {
+      background: no-repeat center var(--background-image-url);
+      background-size: cover;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      right: auto;
+      width: 50%;
+      z-index: -1;
+    }
+  }
 }

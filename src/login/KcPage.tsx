@@ -40,6 +40,14 @@ export default function KcPage(props: { kcContext: KcContext }) {
 }
 
 const classes = {
+  kcHtmlClass: '',
+  kcHeaderClass: '',
+  kcFormCardClass: '',
+  kcFormHeaderClass: '',
+  kcLocaleMainClass: '',
+  kcLabelClass: '',
+  kcInputClass: '',
+  kcFormPasswordVisibilityButtonClass: '',
   kcButtonClass: '',
   kcButtonPrimaryClass: '',
   kcButtonBlockClass: '',

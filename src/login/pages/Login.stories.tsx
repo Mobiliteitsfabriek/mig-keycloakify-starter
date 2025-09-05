@@ -13,11 +13,31 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => <KcPageStory />
+  render: () => (
+    <KcPageStory
+      kcContext={{
+        realm: {
+          registrationAllowed: false
+        },
+        locale: {
+          currentLanguageTag: 'nl'
+        }
+      }}
+    />
+  )
 };
 
 export const ShuttelInterface: Story = {
-  render: () => <KcPageStory kcContext={{ themeName: 'shuttel-interface' }} />
+  render: () => (
+    <KcPageStory
+      kcContext={{
+        themeName: 'shuttel-interface',
+        realm: {
+          registrationAllowed: false
+        }
+      }}
+    />
+  )
 };
 
 export const WithInvalidCredential: Story = {
