@@ -5,47 +5,57 @@ $font: 'Inter', sans-serif;
 
 @mixin h1-xx-large() {
   font-family: $font;
-  font-size: functions.rem(32px);
+  font-size: functions.rem(30px);
   font-weight: 700;
 
   @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(30px);
+    font-size: functions.rem(32px);
   }
 }
 
 @mixin h1-x-large() {
   font-family: $font;
-  font-size: functions.rem(24px);
+  font-size: functions.rem(22px);
   font-weight: 700;
 
   @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(22px);
+    font-size: functions.rem(24px);
   }
 }
 
 @mixin h1-large() {
   font-family: $font;
-  font-size: functions.rem(20px);
+  font-size: functions.rem(18px);
   font-weight: 700;
 
   @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(18px);
+    font-size: functions.rem(20px);
   }
 }
 
 @mixin h1() {
   font-family: $font;
-  font-size: functions.rem(16px);
+  font-size: functions.rem(14px);
   font-weight: 700;
 
   @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(14px);
+    font-size: functions.rem(16px);
   }
 }
 
 @mixin h2() {
   font-family: $font;
-  font-size: functions.rem(14px);
+  font-size: functions.rem(12px);
+  font-weight: 600;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(14px);
+  }
+}
+
+@mixin h3() {
+  font-family: $font;
+  font-size: functions.rem(10px);
   font-weight: 600;
 
   @include breakpoints.media-breakpoint-up(sm) {
@@ -53,9 +63,9 @@ $font: 'Inter', sans-serif;
   }
 }
 
-@mixin h3() {
+@mixin h4() {
   font-family: $font;
-  font-size: functions.rem(12px);
+  font-size: functions.rem(8px);
   font-weight: 600;
 
   @include breakpoints.media-breakpoint-up(sm) {
@@ -63,19 +73,19 @@ $font: 'Inter', sans-serif;
   }
 }
 
-@mixin h4() {
+@mixin body-1() {
   font-family: $font;
-  font-size: functions.rem(10px);
-  font-weight: 600;
+  font-size: functions.rem(14px);
+  font-weight: 400;
 
   @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(8px);
+    font-size: functions.rem(16px);
   }
 }
 
-@mixin body-1() {
+@mixin body-2() {
   font-family: $font;
-  font-size: functions.rem(16px);
+  font-size: functions.rem(12px);
   font-weight: 400;
 
   @include breakpoints.media-breakpoint-up(sm) {
@@ -83,9 +93,9 @@ $font: 'Inter', sans-serif;
   }
 }
 
-@mixin body-2() {
+@mixin body-3() {
   font-family: $font;
-  font-size: functions.rem(14px);
+  font-size: functions.rem(10px);
   font-weight: 400;
 
   @include breakpoints.media-breakpoint-up(sm) {
@@ -93,23 +103,13 @@ $font: 'Inter', sans-serif;
   }
 }
 
-@mixin body-3() {
+@mixin body-4() {
   font-family: $font;
-  font-size: functions.rem(12px);
+  font-size: functions.rem(8px);
   font-weight: 400;
 
   @include breakpoints.media-breakpoint-up(sm) {
     font-size: functions.rem(10px);
-  }
-}
-
-@mixin body-4() {
-  font-family: $font;
-  font-size: functions.rem(10px);
-  font-weight: 400;
-
-  @include breakpoints.media-breakpoint-up(sm) {
-    font-size: functions.rem(8px);
   }
 }
 
