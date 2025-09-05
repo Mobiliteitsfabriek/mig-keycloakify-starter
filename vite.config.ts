@@ -8,12 +8,7 @@ export default defineConfig({
     react(),
     keycloakify({
       accountThemeImplementation: 'none',
-      themeName: [
-        'reisbalans-interface',
-        'reisbalans-admin',
-        'shuttel-interface',
-        'shuttel-admin'
-      ]
+      themeName: ['reisbalans-interface', 'shuttel-interface']
     })
   ]
 });
