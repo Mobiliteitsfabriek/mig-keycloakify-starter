@@ -12,7 +12,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         'shuttel-interface': 'Log in <span>at Shuttel</span>'
       },
       usernameOrEmail: 'E-mail',
-      doLogIn: 'Log in'
+      doLogIn: 'Log in',
+      rememberMe: 'Remember me'
     },
     nl: {
       loginAccountTitle: {
@@ -20,7 +21,8 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         'shuttel-interface': 'Log in <span>at Shuttel</span>'
       },
       usernameOrEmail: 'E-mail',
-      doLogIn: 'Inloggen'
+      doLogIn: 'Inloggen',
+      rememberMe: 'Gegevens onthouden'
     }
   })
   .build();
