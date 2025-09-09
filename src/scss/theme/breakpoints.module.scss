@@ -1,0 +1,44 @@
+// for this project we use a mobile first approach
+
+@use 'sass:map';
+
+/*
+* Map below displays the minimum width for each size, using the following logic
+* xs: 0-576px
+* sm: 576px-768px
+* md: 768px-992px
+* lg: 992px-1200px
+* xl: 1200px+
+*/
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1550px
+);
+
+/*
+* Minimum breakpoint width. Null for the smallest (first) breakpoint.
+*
+*   >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+*   576px
+*/
+@function breakpoint-min($name) {
+  $min: map.get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: breakpoint-min($name);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

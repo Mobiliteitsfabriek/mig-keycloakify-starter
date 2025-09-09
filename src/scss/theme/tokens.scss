@@ -1,0 +1,395 @@
+@use 'sass:map';
+
+@use './breakpoints.module';
+@use './colors.module';
+
+$radius: (
+  small: (
+    base: 4px,
+    mobile: 4px
+  ),
+  medium: (
+    base: 6px,
+    mobile: 4px
+  ),
+  large: (
+    base: 8px,
+    mobile: 6px
+  ),
+  extralarge: (
+    base: 12px,
+    mobile: 8px
+  ),
+  superlarge: (
+    base: 16px,
+    mobile: 12px
+  )
+);
+
+$spacing: (
+  small: (
+    base: 4px,
+    mobile: 4px
+  ),
+  medium: (
+    base: 8px,
+    mobile: 6px
+  ),
+  large: (
+    base: 12px,
+    mobile: 8px
+  ),
+  extralarge: (
+    base: 16px,
+    mobile: 12px
+  ),
+  superlarge: (
+    base: 24px,
+    mobile: 16px
+  )
+);
+
+$background-colors: (
+  'primary': (
+    base: colors.$white,
+    dark: colors.$bluegray-800
+  ),
+  'primaryinverse': (
+    base: colors.$black,
+    dark: colors.$white
+  ),
+  'secondary': (
+    base: colors.$bluegray-100,
+    dark: colors.$bluegray-900
+  ),
+  'tertiary': (
+    base: colors.$white,
+    dark: colors.$black
+  ),
+  'quaternary': (
+    base: colors.$bluegray-50,
+    dark: colors.$bluegray-700
+  ),
+  'quinary': (
+    base: colors.$bluegray-200,
+    dark: colors.$bluegray-600
+  ),
+  'alwaysblack': (
+    base: colors.$black,
+    dark: colors.$black
+  ),
+  'alwaysgray': (
+    base: colors.$bluegray-300,
+    dark: colors.$bluegray-300
+  )
+);
+
+$content-colors: (
+  'primary': (
+    base: colors.$bluegray-900,
+    dark: colors.$white
+  ),
+  'primaryinverse': (
+    base: colors.$white,
+    dark: colors.$bluegray-900
+  ),
+  'secondary': (
+    base: colors.$bluegray-700,
+    dark: colors.$bluegray-300
+  ),
+  'tertiary': (
+    base: colors.$bluegray-600,
+    dark: colors.$bluegray-300
+  ),
+  'alwaysgray': (
+    base: colors.$bluegray-400,
+    dark: colors.$bluegray-400
+  ),
+  'alwayslight': (
+    base: colors.$white,
+    dark: colors.$white
+  )
+);
+
+$indicator-background-colors: (
+  'bluegray': (
+    base: colors.$bluegray-100,
+    dark: colors.$bluegray-900
+  ),
+  'blue': (
+    base: colors.$blue-100,
+    dark: colors.$blue-900
+  ),
+  'purple': (
+    base: colors.$purple-100,
+    dark: colors.$purple-900
+  ),
+  'green': (
+    base: colors.$green-100,
+    dark: colors.$green-900
+  ),
+  'orange': (
+    base: colors.$orange-100,
+    dark: colors.$orange-900
+  ),
+  'red': (
+    base: colors.$red-100,
+    dark: colors.$red-900
+  )
+);
+
+$indicator-content-colors: (
+  'bluegray': (
+    base: colors.$bluegray-700,
+    dark: colors.$bluegray-300
+  ),
+  'blue': (
+    base: colors.$blue-700,
+    dark: colors.$blue-300
+  ),
+  'purple': (
+    base: colors.$purple-700,
+    dark: colors.$purple-300
+  ),
+  'green': (
+    base: colors.$green-700,
+    dark: colors.$green-300
+  ),
+  'orange': (
+    base: colors.$orange-700,
+    dark: colors.$orange-300
+  ),
+  'red': (
+    base: colors.$red-700,
+    dark: colors.$red-300
+  )
+);
+
+$interactive-background-colors: (
+  'primary': (
+    base: colors.$bluegray-800,
+    dark: colors.$white
+  ),
+  'primaryhover': (
+    base: colors.$bluegray-900,
+    dark: colors.$bluegray-50
+  ),
+  'primaryinverse': (
+    base: colors.$white,
+    dark: colors.$bluegray-900
+  ),
+  'secondary': (
+    base: colors.$bluegray-100,
+    dark: colors.$bluegray-800
+  ),
+  'secondaryhover': (
+    base: colors.$bluegray-200,
+    dark: colors.$bluegray-700
+  ),
+  'secondaryactive': (
+    base: colors.$bluegray-900,
+    dark: colors.$white
+  ),
+  'secondaryinverse': (
+    base: colors.$bluegray-700,
+    dark: colors.$bluegray-100
+  ),
+  'quaternary': (
+    base: colors.$bluegray-50,
+    dark: colors.$bluegray-700
+  ),
+  'quaternaryhover': (
+    base: colors.$bluegray-100,
+    dark: colors.$bluegray-600
+  ),
+  'option': (
+    base: colors.$blue-100,
+    dark: colors.$blue-700
+  ),
+  'optionhover': (
+    base: colors.$blue-200,
+    dark: colors.$blue-900
+  )
+);
+
+$interactive-content-colors: (
+  'primary': (
+    base: colors.$white,
+    dark: colors.$bluegray-900
+  ),
+  'primaryinverse': (
+    base: colors.$bluegray-900,
+    dark: colors.$white
+  ),
+  'secondary': (
+    base: colors.$bluegray-900,
+    dark: colors.$white
+  ),
+  'secondaryactive': (
+    base: colors.$white,
+    dark: colors.$bluegray-900
+  ),
+  'secondaryinverse': (
+    base: colors.$white,
+    dark: colors.$bluegray-900
+  ),
+  'tertiary': (
+    base: colors.$bluegray-900,
+    dark: colors.$white
+  ),
+  'quaternary': (
+    base: colors.$bluegray-600,
+    dark: colors.$bluegray-300
+  ),
+  'option': (
+    base: colors.$blue,
+    dark: colors.$blue-400
+  ),
+  'optionhover': (
+    base: colors.$blue-200,
+    dark: colors.$blue-900
+  ),
+  'textbutton': (
+    base: colors.$blue,
+    dark: colors.$blue-400
+  )
+);
+
+$input-background-colors: (
+  'primary': (
+    base: colors.$white,
+    dark: colors.$bluegray-600
+  ),
+  'secondary': (
+    base: colors.$bluegray-200,
+    dark: colors.$bluegray
+  )
+);
+
+$exceptions-background-colors: (
+  'sidemenu': (
+    base: colors.$bluegray-900,
+    dark: colors.$black
+  ),
+  'overviewweeks': (
+    base: colors.$bluegray-300,
+    dark: colors.$blue-800
+  ),
+  'overviewweekends': (
+    base: colors.$blue-200,
+    dark: colors.$blue-800
+  ),
+  'overviewholidays': (
+    base: colors.$purple-200,
+    dark: colors.$purple-400
+  ),
+  'grossindicator': (
+    base: colors.$purple-200,
+    dark: colors.$purple
+  ),
+  'netindicator': (
+    base: colors.$blue-200,
+    dark: colors.$blue
+  )
+);
+
+$exceptions-content-colors: (
+  'overviewweeks': (
+    base: colors.$bluegray-800,
+    dark: colors.$bluegray-200
+  ),
+  'overviewweekends': (
+    base: colors.$blue-800,
+    dark: colors.$blue-200
+  ),
+  'overviewholidays': (
+    base: colors.$purple-800,
+    dark: colors.$white
+  ),
+  'grossindicator': (
+    base: colors.$purple-800,
+    dark: colors.$white
+  ),
+  'netindicator': (
+    base: colors.$blue-800,
+    dark: colors.$white
+  ),
+  'skeletonbase': (
+    base: colors.$bluegray-300,
+    dark: colors.$bluegray-700
+  ),
+  'skeletonhighlight': (
+    base: colors.$bluegray-200,
+    dark: colors.$bluegray-800
+  )
+);
+
+$shadows: (
+  tiny: 0 2px 3px 0 rgba(colors.$bluegray-900, 0.05),
+  tinytop: 0 -1px 3px 0 rgba(colors.$bluegray-900, 0.3),
+  small: 0 3px 8px 0 rgba(colors.$bluegray-900, 0.2),
+  normal: 0 3px 16px 0 rgba(colors.$bluegray-900, 0.3),
+  large: 0 5px 24px 0 rgba(colors.$bluegray-900, 0.3)
+);
+
+@mixin render-color-variables($colorMap, $namePattern) {
+  @each $name, $value in $colorMap {
+    --color-#{$namePattern}-#{$name}: light-dark(
+      #{map.get($value, base)},
+      #{map.get($value, dark)}
+    );
+  }
+}
+
+:root {
+  --color-border-primary: light-dark(#{colors.$bluegray-300}, #{colors.$bluegray-600});
+  --color-border-secondaryinverse: light-dark(
+    #{colors.$bluegray-700},
+    #{colors.$bluegray-200}
+  );
+  --color-input-border-primary: light-dark(#{colors.$bluegray-300}, #{colors.$bluegray});
+  --color-reisbalansbrandcolorprimary: #{colors.$green};
+
+  color-scheme: light; // color-scheme: light dark; // FIXME enable this when tokens are fully implemented
+
+  [data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  [data-theme='light'] {
+    color-scheme: light;
+  }
+
+  @each $name, $value in $radius {
+    --radius-#{$name}: #{map.get($value, mobile)};
+
+    @include breakpoints.media-breakpoint-up(sm) {
+      --radius-#{$name}: #{map.get($value, base)};
+    }
+  }
+
+  @each $name, $value in $spacing {
+    --spacing-#{$name}: #{map.get($value, mobile)};
+
+    @include breakpoints.media-breakpoint-up(sm) {
+      --spacing-#{$name}: #{map.get($value, base)};
+    }
+  }
+
+  @each $name, $value in $shadows {
+    --shadow-#{$name}: #{$value};
+  }
+
+  @include render-color-variables($background-colors, 'background');
+  @include render-color-variables($content-colors, 'content');
+  @include render-color-variables($indicator-background-colors, 'indicator-background');
+  @include render-color-variables($indicator-content-colors, 'indicator-content');
+  @include render-color-variables(
+    $interactive-background-colors,
+    'interactive-background'
+  );
+  @include render-color-variables($interactive-content-colors, 'interactive-content');
+  @include render-color-variables($input-background-colors, 'input-background');
+  @include render-color-variables($exceptions-background-colors, 'exceptions-background');
+  @include render-color-variables($exceptions-content-colors, 'exceptions-content');
+}

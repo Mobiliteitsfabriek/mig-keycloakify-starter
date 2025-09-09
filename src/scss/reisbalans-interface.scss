@@ -1,0 +1,7 @@
+@use './common.scss';
+
+:root {
+  --primary-color: hsla(161, 60%, 50%, 1);
+  --background-image-url: url('../assets/img/reisbalans-interface-background.svg');
+  --logo-image-url: url('../assets/img/reisbalans-logo.svg');
+}

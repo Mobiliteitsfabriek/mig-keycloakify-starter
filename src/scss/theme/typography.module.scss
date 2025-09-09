@@ -1,0 +1,144 @@
+@use './functions.module';
+@use './breakpoints.module';
+
+$font: 'Inter', sans-serif;
+
+@mixin h1-xx-large() {
+  font-family: $font;
+  font-size: functions.rem(30px);
+  font-weight: 700;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(32px);
+  }
+}
+
+@mixin h1-x-large() {
+  font-family: $font;
+  font-size: functions.rem(22px);
+  font-weight: 700;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(24px);
+  }
+}
+
+@mixin h1-large() {
+  font-family: $font;
+  font-size: functions.rem(18px);
+  font-weight: 700;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(20px);
+  }
+}
+
+@mixin h1() {
+  font-family: $font;
+  font-size: functions.rem(14px);
+  font-weight: 700;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(16px);
+  }
+}
+
+@mixin h2() {
+  font-family: $font;
+  font-size: functions.rem(12px);
+  font-weight: 600;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(14px);
+  }
+}
+
+@mixin h3() {
+  font-family: $font;
+  font-size: functions.rem(10px);
+  font-weight: 600;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(12px);
+  }
+}
+
+@mixin h4() {
+  font-family: $font;
+  font-size: functions.rem(8px);
+  font-weight: 600;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(10px);
+  }
+}
+
+@mixin body-1() {
+  font-family: $font;
+  font-size: functions.rem(14px);
+  font-weight: 400;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(16px);
+  }
+}
+
+@mixin body-2() {
+  font-family: $font;
+  font-size: functions.rem(12px);
+  font-weight: 400;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(14px);
+  }
+}
+
+@mixin body-3() {
+  font-family: $font;
+  font-size: functions.rem(10px);
+  font-weight: 400;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(12px);
+  }
+}
+
+@mixin body-4() {
+  font-family: $font;
+  font-size: functions.rem(8px);
+  font-weight: 400;
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    font-size: functions.rem(10px);
+  }
+}
+
+@mixin body-5() {
+  font-family: $font;
+  font-size: functions.rem(8px);
+  font-weight: 400;
+}
+
+@mixin button-x-large() {
+  font-family: $font;
+  font-size: functions.rem(16px);
+  font-weight: 700;
+}
+
+@mixin button-large() {
+  font-family: $font;
+  font-size: functions.rem(14px);
+  font-weight: 600;
+}
+
+@mixin button-medium() {
+  font-family: $font;
+  font-size: functions.rem(12px);
+  font-weight: 600;
+}
+
+@mixin button-small() {
+  font-family: $font;
+  font-size: functions.rem(12px);
+  font-weight: 600;
+}

@@ -1,0 +1,79 @@
+@use '../theme/breakpoints.module';
+@use '../theme/colors.module';
+
+.kcLoginClass {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  padding: 0;
+
+  .kcHeaderClass {
+    display: none;
+  }
+
+  .kcFormCardClass {
+    border: none;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 24px;
+    width: 100%;
+
+    @include breakpoints.media-breakpoint-up(md) {
+      left: 50%;
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .kcLocaleMainClass {
+    display: none;
+  }
+
+  .kcFormHeaderClass {
+    margin: 0 0 56px;
+
+    @include breakpoints.media-breakpoint-up(md) {
+      margin: 0 0 var(--spacing-superlarge);
+    }
+  }
+
+  #kc-page-title {
+    font-family: sperwerMS;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+
+    span {
+      color: colors.$bluegray-800;
+      display: none;
+
+      span {
+        color: colors.$bluegray-400;
+      }
+
+      @include breakpoints.media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    &:before {
+      content: '';
+      background: transparent var(--logo-image-url) no-repeat;
+      background-size: contain;
+      display: block;
+      height: 36px;
+      width: 100%;
+
+      @include breakpoints.media-breakpoint-up(md) {
+        margin: 0 0 40px;
+      }
+    }
+  }
+
+  .kcFormSettingClass {
+    align-items: center;
+  }
+}

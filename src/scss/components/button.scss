@@ -1,0 +1,41 @@
+.kcButtonClass {
+  background-color: var(--background-color);
+  border: 0;
+  border-radius: var(--radius-large);
+  color: var(--color);
+  cursor: pointer;
+  height: 40px;
+  padding: 10px 16px;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  &.kcButtonBlockClass {
+    width: 100%;
+  }
+
+  &.kcButtonPrimaryClass {
+    --background-color: var(--color-interactive-background-primary);
+    --background-color-hover: var(--color-interactive-background-primaryhover);
+    --background-color-active: var(--color-interactive-background-primaryhover);
+    --border-color: var(--color-interactive-background-primary);
+    --border-color-hover: var(--color-interactive-background-primaryhover);
+    --border-color-active: var(--color-interactive-background-primaryhover);
+    --color: var(--color-interactive-content-primary);
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--background-color-active);
+    border-color: var(--border-color-active);
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--background-color-hover);
+    border-color: var(--border-color-hover);
+  }
+}
