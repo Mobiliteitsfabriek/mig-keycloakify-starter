@@ -7,11 +7,15 @@ form,
 .kcFormClass {
   display: flex;
   flex-direction: column;
-  gap: var(--space-m);
+  gap: var(--space-l);
 }
 
 hr {
   display: none;
+}
+
+a {
+  color: var(--color-interactive-content);
 }
 
 #kc-form-buttons {
@@ -25,17 +29,29 @@ hr {
   grid-template-areas: ". login";
 }
 
+.kcFormHeaderClass {
+  #kc-page-title {
+    margin: 0;
+  }
+}
+
 #root {
   grid-area: login;
 }
 
 .kcLoginClass {
+  padding: 0;
+  position: relative;
+
+  display: grid;
+  grid-template-rows: 1fr 2fr;
   block-size: 100%;
   background-color: var(--color-background-primary);
 }
 
 .kcFormCardClass {
   max-inline-size: 400px;
+  inline-size: 100%;
   margin-inline: auto;
 }
 
@@ -55,12 +71,22 @@ hr {
 .kcInputClass {
   display: flex;
   position: relative;
-  border: none;
+  border: 1px solid transparent;
   padding: var(--space-m);
   box-shadow: var(--shadow-primary);
   border-radius: var(--radius-m);
 
   inline-size: 100%;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--color-border-interactive);
+  }
+
+  &:disabled {
+    background-color: var(--color-background-secondary);
+    color: var(--color-content-secondary);
+  }
 }
 
 .kcInputGroup {
@@ -154,6 +180,13 @@ hr {
   margin-inline-start: auto;
 }
 
-a {
-  color: var(--color-interactive-content);
+.kcInfoAreaWrapperClass {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  margin-inline: auto;
+
+  &#kc-info-wrapper {
+    background-color: transparent;
+  }
 }

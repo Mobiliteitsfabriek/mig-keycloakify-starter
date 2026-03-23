@@ -1,10 +1,12 @@
 :root {
   --color-content-primary: #242934;
-  --color-content-secondary: #a6b3c5;
+  --color-content-secondary: #47576c;
   --color-content-tertiary: #5b6b80;
   --color-background-primary: #fff;
+  --color-background-secondary: #dfe6ef;
 
   --color-border-primary: #cdd5e1;
+  --color-border-interactive: #0089ff;
 
   --color-interactive-background-primary: #394759;
   --color-interactive-background-primary-hover: #242934;

@@ -48,4 +48,6 @@ const classes = {
   kcButtonClass: "",
   kcBodyClass: "",
   kcFormCardClass: "",
+  kcFormHeaderClass: "",
+  kcHeaderWrapperClass: "",
 } satisfies { [key in ClassKey]?: string };
