@@ -14,8 +14,16 @@ hr {
   display: none;
 }
 
-a {
+.login-pf a {
   color: var(--color-interactive-content);
+  border-radius: var(--radius-s);
+  transition: background-color var(--ease) var(--duration-short);
+
+  &:is(:hover, :focus-visible) {
+    color: var(--color-interactive-content);
+    background-color: var(--color-interactive-background);
+    text-decoration: none;
+  }
 }
 
 #kc-form-buttons {
@@ -23,10 +31,12 @@ a {
   display: flex;
 }
 
-.kcBodyClass {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: ". login";
+@media (min-width: 768px) {
+  .kcBodyClass {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". login";
+  }
 }
 
 .kcFormHeaderClass {
@@ -37,6 +47,7 @@ a {
 
 #root {
   grid-area: login;
+  block-size: 100%;
 }
 
 .kcLoginClass {
@@ -53,6 +64,7 @@ a {
   max-inline-size: 400px;
   inline-size: 100%;
   margin-inline: auto;
+  padding-inline: var(--space-xl);
 }
 
 .kcFormGroupClass {
@@ -161,7 +173,9 @@ a {
   padding: 0 var(--space-l);
   border-radius: var(--radius-m);
 
-  transition: background-color var(--ease) var(--duration-short);
+  transition:
+    background-color var(--ease) var(--duration-short),
+    opacity var(--ease) var(--duration-short);
 
   &:is(:hover, :focus-visible) {
     --background-color: var(--color-interactive-background-primary-hover);

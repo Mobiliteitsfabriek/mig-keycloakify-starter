@@ -1,10 +1,9 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
 import Template from "keycloakify/login/Template";
-import "./styles/tokens/reisbalans.css";
 import "./styles/tokens/main.css";
 import "./styles/main.css";
 
@@ -14,8 +13,18 @@ const doMakeUserConfirmPassword = true;
 
 export default function KcPage(props: { kcContext: KcContext }) {
   const { kcContext } = props;
+  const { themeName } = kcContext;
 
   const { i18n } = useI18n({ kcContext });
+
+  useEffect(() => {
+    const loadTheme = async () => {
+      const tokens = await import(`./styles/tokens/${themeName ?? "reisbalans"}.css`);
+      console.log(tokens);
+    };
+
+    loadTheme();
+  }, [themeName]);
 
   return (
     <Suspense>
