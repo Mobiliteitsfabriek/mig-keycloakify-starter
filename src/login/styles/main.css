@@ -3,17 +3,48 @@ body {
   font-size: var(--text-size-m);
 }
 
-#kc-form-login {
+form,
+.kcFormClass {
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
 }
+
+hr {
+  display: none;
+}
+
 #kc-form-buttons {
   margin: 0;
+  display: flex;
+}
+
+.kcBodyClass {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". login";
+}
+
+#root {
+  grid-area: login;
+}
+
+.kcLoginClass {
+  block-size: 100%;
+  background-color: var(--color-background-primary);
+}
+
+.kcFormCardClass {
+  max-inline-size: 400px;
+  margin-inline: auto;
 }
 
 .kcFormGroupClass {
   margin: 0;
+
+  & > div:empty {
+    display: none;
+  }
 }
 
 .kcLabelClass {
@@ -67,10 +98,15 @@ body {
     appearance: none;
     position: relative;
     margin: 0;
+
     block-size: var(--size-checkbox);
     inline-size: var(--size-checkbox);
     border-radius: var(--radius-s);
     border: 2px solid var(--border-color);
+
+    transition:
+      background-color var(--ease) var(--duration-short),
+      border-color var(--ease) var(--duration-short);
 
     &:checked {
       background-color: var(--color-interactive-background-primary);
@@ -82,15 +118,42 @@ body {
       display: block;
       inset: 0;
       block-size: 100%;
-      background-image: var(--checkbox-icon);
+      background-image: var(--icon-checkbox);
     }
   }
 }
 
 .kcButtonClass {
-  background-color: var(--color-interactive-background-primary);
+  --background-color: var(--color-interactive-background-primary);
+  --height: var(--size-button);
+
+  background-color: var(--background-color);
   border: none;
   color: var(--color-interactive-content-primary);
-  padding: var(--space-l);
+
+  block-size: var(--height);
+  padding: 0 var(--space-l);
   border-radius: var(--radius-m);
+
+  transition: background-color var(--ease) var(--duration-short);
+
+  &:is(:hover, :focus-visible) {
+    --background-color: var(--color-interactive-background-primary-hover);
+  }
+  &:disabled {
+    opacity: var(--opacity-disabled);
+  }
+
+  &#kc-login {
+    inline-size: 100%;
+    margin-block-start: var(--space-xl);
+  }
+}
+
+#kc-login {
+  margin-inline-start: auto;
+}
+
+a {
+  color: var(--color-interactive-content);
 }

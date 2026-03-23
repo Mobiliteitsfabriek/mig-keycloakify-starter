@@ -2,10 +2,12 @@
   --color-content-primary: #242934;
   --color-content-secondary: #a6b3c5;
   --color-content-tertiary: #5b6b80;
+  --color-background-primary: #fff;
 
   --color-border-primary: #cdd5e1;
 
   --color-interactive-background-primary: #394759;
+  --color-interactive-background-primary-hover: #242934;
   --color-interactive-background-secondary: #cdd5e1;
   --color-interactive-content: #0089ff;
   --color-interactive-content-primary: #fff;
@@ -38,8 +40,12 @@
 
   /* Sizes */
   --size-checkbox: 1.25rem;
+  --size-button: 2.5rem;
 
   /* Misc */
   /* TODO: probably replace */
-  --checkbox-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10 L8 14 L16 6' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-checkbox: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10 L8 14 L16 6' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-arrow-right: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.09998 8H12.1M12.1 8L8.09998 12M12.1 8L8.09998 4' stroke='%23242934' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+
+  --opacity-disabled: 0.3;
 }

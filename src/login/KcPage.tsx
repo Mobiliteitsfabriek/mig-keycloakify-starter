@@ -46,4 +46,6 @@ const classes = {
   kcCheckClass: "",
   kcCheckboxInputClass: "",
   kcButtonClass: "",
+  kcBodyClass: "",
+  kcFormCardClass: "",
 } satisfies { [key in ClassKey]?: string };
