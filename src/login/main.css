@@ -1,0 +1,75 @@
+body {
+  color: var(--color-content-primary);
+  font-size: var(--text-size-m);
+}
+
+.kcLabelClass {
+  color: var(--color-content-tertiary);
+  font-size: var(--text-size-m);
+}
+
+.kcInputClass {
+  display: flex;
+  position: relative;
+  border: none;
+  padding: var(--space-m);
+  box-shadow: var(--shadow-primary);
+  border-radius: var(--radius-m);
+
+  inline-size: 100%;
+}
+
+.kcInputGroup {
+  display: flex;
+  position: relative;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  aspect-ratio: 1;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+
+  transition: background-color var(--duration-short) var(--ease);
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--color-interactive-background-secondary);
+  }
+}
+
+.checkbox {
+  label {
+    display: flex;
+    gap: var(--space-m);
+    padding: 0;
+    color: var(--color-content-primary);
+  }
+
+  input[type="checkbox"] {
+    --border-color: var(--color-border-primary);
+
+    appearance: none;
+    position: relative;
+    margin: 0;
+    block-size: var(--size-checkbox);
+    inline-size: var(--size-checkbox);
+    border-radius: var(--radius-s);
+    border: 2px solid var(--border-color);
+
+    &:checked {
+      background-color: var(--color-interactive-background-primary);
+      --border-color: var(--color-interactive-background-primary);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      inset: 0;
+      block-size: 100%;
+      background-image: var(--checkbox-icon);
+    }
+  }
+}

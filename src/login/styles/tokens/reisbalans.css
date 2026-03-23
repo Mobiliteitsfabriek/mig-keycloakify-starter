@@ -1,0 +1,43 @@
+:root {
+  --color-content-primary: #242934;
+  --color-content-secondary: #a6b3c5;
+  --color-content-tertiary: #5b6b80;
+
+  --color-border-primary: #cdd5e1;
+
+  --color-interactive-background-primary: #394759;
+  --color-interactive-background-secondary: #cdd5e1;
+  --color-interactive-content: #0089ff;
+
+  --color-indicator-error-content: #ff4444;
+
+  --color-indicator-info-background: #fdeacd;
+  --color-indicator-info-primary: #ff8727;
+
+  --color-brand-primary: #33caaf;
+
+  --color-shadow-primary: #32325d;
+
+  --shadow-primary: 0 0 0 1px hsl(from var(--color-shadow-primary) h s l / 0.07),
+    0 3px 3px -1px hsl(from var(--color-shadow-primary) h s l / 0.12);
+
+  /* Radius */
+  --radius-s: 4px;
+  --radius-m: 6px;
+
+  /* Typography */
+  --text-size-m: 0.875rem;
+
+  /* Spaces */
+  --space-s: 0.25rem;
+  --space-m: 0.5rem;
+  --space-l: 0.75rem;
+  --space-xl: 1rem;
+
+  /* Sizes */
+  --size-checkbox: 1.25rem;
+
+  /* Misc */
+  /* TODO: probably replace */
+  --checkbox-icon: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10 L8 14 L16 6' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
