@@ -3,6 +3,19 @@ body {
   font-size: var(--text-size-m);
 }
 
+#kc-form-login {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+#kc-form-buttons {
+  margin: 0;
+}
+
+.kcFormGroupClass {
+  margin: 0;
+}
+
 .kcLabelClass {
   color: var(--color-content-tertiary);
   font-size: var(--text-size-m);
@@ -72,4 +85,12 @@ body {
       background-image: var(--checkbox-icon);
     }
   }
+}
+
+.kcButtonClass {
+  background-color: var(--color-interactive-background-primary);
+  border: none;
+  color: var(--color-interactive-content-primary);
+  padding: var(--space-l);
+  border-radius: var(--radius-m);
 }

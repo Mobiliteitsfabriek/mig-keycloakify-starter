@@ -6,7 +6,7 @@ import DefaultPage from "keycloakify/login/DefaultPage";
 import Template from "keycloakify/login/Template";
 import "./styles/tokens/reisbalans.css";
 import "./styles/tokens/main.css";
-import "./main.css";
+import "./styles/main.css";
 
 const UserProfileFormFields = lazy(() => import("keycloakify/login/UserProfileFormFields"));
 
@@ -45,4 +45,5 @@ const classes = {
   kcFormPasswordVisibilityButtonClass: "",
   kcCheckClass: "",
   kcCheckboxInputClass: "",
+  kcButtonClass: "",
 } satisfies { [key in ClassKey]?: string };
