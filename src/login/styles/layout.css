@@ -18,9 +18,9 @@ form,
   }
 }
 
-#root {
+#root,
+#storybook-root {
   grid-area: login;
-  block-size: 100%;
 }
 
 .kcLoginClass {
@@ -32,10 +32,10 @@ form,
   gap: 3.5rem 0;
 
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
 
-  #kc-header {
-    align-self: end;
+  .kcFormCardClass {
+    align-self: center;
   }
 }
 

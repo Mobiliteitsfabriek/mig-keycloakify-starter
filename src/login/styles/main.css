@@ -2,29 +2,23 @@
 @import "./layout.css";
 @import "./form.css";
 @import "./typography.css";
+@import "./header.css";
+@import "./username.css";
 @import "./components/index.css";
 
 hr {
   display: none;
 }
 
-.login-pf-page .login-pf-page-header {
-  margin: 0;
-}
-
-.kcFormHeaderClass {
-  #kc-page-title {
-    margin: 0;
-  }
-}
-
-.login-pf-page .login-pf-page-header {
-  text-align: initial;
-}
-
-#root {
+#root,
+#storybook-root {
   background-color: var(--color-background-primary);
   padding: var(--space-m);
+}
+
+#kc-content-wrapper,
+#kc-form-wrapper {
+  margin: 0;
 }
 
 #kc-login {

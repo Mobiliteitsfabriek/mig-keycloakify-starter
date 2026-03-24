@@ -1,0 +1,21 @@
+#kc-header-wrapper {
+  padding: 0;
+}
+
+.login-pf-page .login-pf-page-header {
+  margin: 0;
+}
+
+.kcFormHeaderClass {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+
+  #kc-page-title {
+    margin: 0;
+  }
+}
+
+.login-pf-page .login-pf-page-header {
+  text-align: initial;
+}
