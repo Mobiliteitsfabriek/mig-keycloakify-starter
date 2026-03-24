@@ -8,9 +8,9 @@ form,
 @media (min-width: 768px) {
   body.kcBodyClass {
     background: var(--image-background);
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: max(80vh, 50%);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -21,6 +21,7 @@ form,
 #root,
 #storybook-root {
   grid-area: login;
+  block-size: 100%;
 }
 
 .kcLoginClass {
