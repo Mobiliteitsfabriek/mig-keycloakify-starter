@@ -3,13 +3,11 @@ import type { ClassKey } from "keycloakify/login";
 import type { KcContext } from "./KcContext";
 import { useI18n } from "./i18n";
 import DefaultPage from "keycloakify/login/DefaultPage";
-import Template from "keycloakify/login/Template";
+import Template from "./Template";
 import "./styles/tokens/main.css";
 import "./styles/main.css";
 
 const UserProfileFormFields = lazy(() => import("keycloakify/login/UserProfileFormFields"));
-const LoginPassword = lazy(() => import("./pages/LoginPassword"));
-const LoginUsername = lazy(() => import("./pages/LoginUsername"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -19,6 +17,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
   const { i18n } = useI18n({ kcContext });
 
+  // Dynamically import theme tokens based on themeName
   useEffect(() => {
     const loadTheme = async () => {
       await import(`./styles/tokens/${themeName ?? "reisbalans"}.css`);
@@ -31,10 +30,6 @@ export default function KcPage(props: { kcContext: KcContext }) {
     <Suspense>
       {(() => {
         switch (kcContext.pageId) {
-          case "login-password.ftl":
-            return <LoginPassword {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss={true} />;
-          case "login-username.ftl":
-            return <LoginUsername {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss={true} />;
           default:
             return (
               <DefaultPage
