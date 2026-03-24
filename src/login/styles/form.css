@@ -1,0 +1,29 @@
+.kcFormCardClass {
+  max-inline-size: 400px;
+  inline-size: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+.kcFormGroupClass {
+  margin: 0;
+
+  & > div:empty {
+    display: none;
+  }
+}
+
+.kcInputGroup {
+  display: flex;
+  position: relative;
+}
+
+.kcLabelClass {
+  color: var(--color-content-tertiary);
+  font-size: var(--text-size-m);
+}
+
+#kc-form-buttons {
+  margin: 0;
+  display: flex;
+}

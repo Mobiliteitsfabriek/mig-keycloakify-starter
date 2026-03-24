@@ -1,0 +1,36 @@
+.kcInputClass {
+  display: flex;
+  position: relative;
+  border: 1px solid transparent;
+  padding: var(--space-m);
+  box-shadow: var(--shadow-primary);
+  border-radius: var(--radius-m);
+
+  inline-size: 100%;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--color-border-interactive);
+  }
+
+  &:disabled {
+    background-color: var(--color-background-secondary);
+    color: var(--color-content-secondary);
+  }
+}
+
+.kcFormPasswordVisibilityButtonClass {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  aspect-ratio: 1;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+
+  transition: background-color var(--duration-short) var(--ease);
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--color-interactive-background-secondary);
+  }
+}

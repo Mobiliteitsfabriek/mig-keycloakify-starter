@@ -1,0 +1,24 @@
+form,
+.kcFormClass {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+@media (min-width: 768px) {
+  body.kcBodyClass {
+    background: var(--image-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". login";
+  }
+}
+
+#root {
+  grid-area: login;
+  block-size: 100%;
+}

@@ -1,4 +1,5 @@
 @import "./fonts.css";
+@import "./layout.css";
 
 body {
   color: var(--color-content-primary);
@@ -6,16 +7,10 @@ body {
   font-family: Inter;
 }
 
-h1 {
+h1,
+.kcFormHeaderClass h1 {
   font-family: Sperwer;
   font-size: var(--text-size-xl);
-}
-
-form,
-.kcFormClass {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-l);
 }
 
 hr {
@@ -34,33 +29,10 @@ hr {
   }
 }
 
-#kc-form-buttons {
-  margin: 0;
-  display: flex;
-}
-
-@media (min-width: 768px) {
-  body.kcBodyClass {
-    background: var(--image-background);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: ". login";
-  }
-}
-
 .kcFormHeaderClass {
   #kc-page-title {
     margin: 0;
   }
-}
-
-#root {
-  grid-area: login;
-  block-size: 100%;
 }
 
 .kcLoginClass {
@@ -71,136 +43,6 @@ hr {
   grid-template-rows: 1fr 2fr;
   block-size: 100%;
   background-color: var(--color-background-primary);
-}
-
-.kcFormCardClass {
-  max-inline-size: 400px;
-  inline-size: 100%;
-  margin-inline: auto;
-  padding-inline: var(--space-xl);
-}
-
-.kcFormGroupClass {
-  margin: 0;
-
-  & > div:empty {
-    display: none;
-  }
-}
-
-.kcLabelClass {
-  color: var(--color-content-tertiary);
-  font-size: var(--text-size-m);
-}
-
-.kcInputClass {
-  display: flex;
-  position: relative;
-  border: 1px solid transparent;
-  padding: var(--space-m);
-  box-shadow: var(--shadow-primary);
-  border-radius: var(--radius-m);
-
-  inline-size: 100%;
-
-  &:focus {
-    outline: none;
-    border: 1px solid var(--color-border-interactive);
-  }
-
-  &:disabled {
-    background-color: var(--color-background-secondary);
-    color: var(--color-content-secondary);
-  }
-}
-
-.kcInputGroup {
-  display: flex;
-  position: relative;
-}
-
-.kcFormPasswordVisibilityButtonClass {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  inset-block: 0;
-  inset-inline-end: 0;
-  aspect-ratio: 1;
-  border-radius: 0 var(--radius-m) var(--radius-m) 0;
-
-  transition: background-color var(--duration-short) var(--ease);
-
-  &:is(:hover, :focus-visible) {
-    background-color: var(--color-interactive-background-secondary);
-  }
-}
-
-.checkbox {
-  label {
-    display: flex;
-    gap: var(--space-m);
-    padding: 0;
-    color: var(--color-content-primary);
-  }
-
-  input[type="checkbox"] {
-    --border-color: var(--color-border-primary);
-
-    appearance: none;
-    position: relative;
-    margin: 0;
-
-    block-size: var(--size-checkbox);
-    inline-size: var(--size-checkbox);
-    border-radius: var(--radius-s);
-    border: 2px solid var(--border-color);
-
-    transition:
-      background-color var(--ease) var(--duration-short),
-      border-color var(--ease) var(--duration-short);
-
-    &:checked {
-      background-color: var(--color-interactive-background-primary);
-      --border-color: var(--color-interactive-background-primary);
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      inset: 0;
-      block-size: 100%;
-      background-image: var(--icon-checkbox);
-    }
-  }
-}
-
-.kcButtonClass {
-  --background-color: var(--color-interactive-background-primary);
-  --height: var(--size-button);
-
-  background-color: var(--background-color);
-  border: none;
-  color: var(--color-interactive-content-primary);
-
-  block-size: var(--height);
-  padding: 0 var(--space-l);
-  border-radius: var(--radius-m);
-
-  transition:
-    background-color var(--ease) var(--duration-short),
-    opacity var(--ease) var(--duration-short);
-
-  &:is(:hover, :focus-visible) {
-    --background-color: var(--color-interactive-background-primary-hover);
-  }
-  &:disabled {
-    opacity: var(--opacity-disabled);
-  }
-
-  &#kc-login {
-    inline-size: 100%;
-    margin-block-start: var(--space-xl);
-  }
 }
 
 #kc-login {
