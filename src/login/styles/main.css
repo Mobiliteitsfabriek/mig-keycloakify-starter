@@ -1,5 +1,7 @@
 @import "./fonts.css";
 @import "./layout.css";
+@import "./form.css";
+@import "./components/index.css";
 
 body {
   color: var(--color-content-primary);
@@ -47,6 +49,10 @@ hr {
 
 #kc-login {
   margin-inline-start: auto;
+}
+
+#kc-attempted-username {
+  font-size: var(--text-size-m);
 }
 
 .kcInfoAreaWrapperClass {
