@@ -183,15 +183,14 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
               </div>
             )}
-            <p></p>
-            <p>
-              {msg("loginProblems")}
-              <br />
-              {msg("contactIfProblem1")} <a href="">{msg("contact")}</a> {msg("contactIfProblem2")}
-            </p>
           </div>
         </div>
       </div>
+      <p className="login-trouble">
+        {msg("loginProblems")}
+        <br />
+        {msg("contactIfProblem1")} <a href="">{msg("contact")}</a> {msg("contactIfProblem2")}
+      </p>
     </div>
   );
 }

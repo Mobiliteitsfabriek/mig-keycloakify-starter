@@ -8,20 +8,23 @@ hr {
   display: none;
 }
 
+.login-pf-page .login-pf-page-header {
+  margin: 0;
+}
+
 .kcFormHeaderClass {
   #kc-page-title {
     margin: 0;
   }
 }
 
-.kcLoginClass {
-  padding: 0;
-  position: relative;
+.login-pf-page .login-pf-page-header {
+  text-align: initial;
+}
 
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  block-size: 100%;
+#root {
   background-color: var(--color-background-primary);
+  padding: var(--space-m);
 }
 
 #kc-login {
@@ -30,15 +33,4 @@ hr {
 
 #kc-attempted-username {
   font-size: var(--text-size-m);
-}
-
-.kcInfoAreaWrapperClass {
-  position: absolute;
-  inset-block-end: 0;
-  inset-inline: 0;
-  margin-inline: auto;
-
-  &#kc-info-wrapper {
-    background-color: transparent;
-  }
 }

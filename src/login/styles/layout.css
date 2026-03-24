@@ -22,3 +22,24 @@ form,
   grid-area: login;
   block-size: 100%;
 }
+
+.kcLoginClass {
+  padding: 0;
+  position: relative;
+  block-size: 100%;
+  max-inline-size: 400px;
+  margin-inline: auto;
+  gap: 3.5rem 0;
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  #kc-header {
+    align-self: end;
+  }
+}
+
+.login-trouble {
+  text-align: center;
+  align-self: end;
+}
