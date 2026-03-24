@@ -101,7 +101,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
             const node = (
               <h1 id="kc-page-title">
                 {headerNode}
-                <br /> <span>{msg("atPlatform", realm.displayNameHtml)}</span>
+                <br /> <span className="text-tertiary">{msg("atPlatform", realm.displayNameHtml)}</span>
               </h1>
             );
 
