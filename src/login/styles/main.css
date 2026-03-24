@@ -1,6 +1,14 @@
+@import "./fonts.css";
+
 body {
   color: var(--color-content-primary);
   font-size: var(--text-size-m);
+  font-family: Inter;
+}
+
+h1 {
+  font-family: Sperwer;
+  font-size: var(--text-size-xl);
 }
 
 form,
@@ -32,7 +40,12 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .kcBodyClass {
+  body.kcBodyClass {
+    background: var(--image-background);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: ". login";

@@ -8,6 +8,8 @@ import "./styles/tokens/main.css";
 import "./styles/main.css";
 
 const UserProfileFormFields = lazy(() => import("keycloakify/login/UserProfileFormFields"));
+const LoginPassword = lazy(() => import("./pages/LoginPassword"));
+const LoginUsername = lazy(() => import("./pages/LoginUsername"));
 
 const doMakeUserConfirmPassword = true;
 
@@ -19,8 +21,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 
   useEffect(() => {
     const loadTheme = async () => {
-      const tokens = await import(`./styles/tokens/${themeName ?? "reisbalans"}.css`);
-      console.log(tokens);
+      await import(`./styles/tokens/${themeName ?? "reisbalans"}.css`);
     };
 
     loadTheme();
@@ -30,6 +31,10 @@ export default function KcPage(props: { kcContext: KcContext }) {
     <Suspense>
       {(() => {
         switch (kcContext.pageId) {
+          case "login-password.ftl":
+            return <LoginPassword {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss={true} />;
+          case "login-username.ftl":
+            return <LoginUsername {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss={true} />;
           default:
             return (
               <DefaultPage

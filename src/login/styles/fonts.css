@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Inter;
+  src:
+    url("../assets/inter/Inter.ttf") format("TrueType"),
+    url("../assets/inter/Inter.woff") format("woff"),
+    url("../assets/inter/Inter.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Sperwer;
+  font-weight: bold;
+  src:
+    url("../assets/sperwer/SperwerMS-Bold.ttf") format("TrueType"),
+    url("../assets/sperwer/SperwerMS-Bold.woff") format("woff"),
+    url("../assets/sperwer/SperwerMS-Bold.woff2") format("woff2");
+}
