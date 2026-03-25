@@ -16,6 +16,10 @@
   --color-interactive-content-primary: #fff;
 
   --color-indicator-error-content: #ff4444;
+  --color-indicator-error-background: #ffe5e5;
+
+  --color-indicator-alert-content: #ff8727;
+  --color-indicator-alert-background: #fdeacd;
 
   --color-indicator-info-background: #fdeacd;
   --color-indicator-info-primary: #ff8727;

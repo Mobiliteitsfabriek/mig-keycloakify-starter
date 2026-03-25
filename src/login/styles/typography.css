@@ -1,6 +1,7 @@
 body {
   color: var(--color-content-primary);
   font-size: var(--text-size-m);
+  --pf-global--FontSize--xs: var(--text-size-m);
   font-family: Inter;
 }
 
