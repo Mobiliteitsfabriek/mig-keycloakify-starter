@@ -1,0 +1,8 @@
+#kc-username {
+  text-align: unset;
+  margin: 0;
+
+  a {
+    margin-inline-end: var(--space-m);
+  }
+}

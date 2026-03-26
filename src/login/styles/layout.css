@@ -1,0 +1,46 @@
+form,
+.kcFormClass {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+@media (min-width: 768px) {
+  body.kcBodyClass {
+    background: var(--image-background);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: max(80vh, 50%);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". login";
+  }
+}
+
+#root,
+#storybook-root {
+  grid-area: login;
+  block-size: 100%;
+}
+
+.kcLoginClass {
+  padding: 0;
+  position: relative;
+  block-size: 100%;
+  max-inline-size: 400px;
+  margin-inline: auto;
+  gap: 3.5rem 0;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  .kcFormCardClass {
+    align-self: center;
+  }
+}
+
+.login-trouble {
+  text-align: center;
+  align-self: end;
+}

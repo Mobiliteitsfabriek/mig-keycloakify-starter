@@ -1,0 +1,30 @@
+@import "./fonts.css";
+@import "./layout.css";
+@import "./form.css";
+@import "./typography.css";
+@import "./header.css";
+@import "./username.css";
+@import "./components/index.css";
+
+hr {
+  display: none;
+}
+
+#root,
+#storybook-root {
+  background-color: var(--color-background-primary);
+  padding: var(--space-m);
+}
+
+#kc-content-wrapper,
+#kc-form-wrapper {
+  margin: 0;
+}
+
+#kc-login {
+  margin-inline-start: auto;
+}
+
+#kc-attempted-username {
+  font-size: var(--text-size-m);
+}

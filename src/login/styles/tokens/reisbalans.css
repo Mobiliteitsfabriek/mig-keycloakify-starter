@@ -1,0 +1,61 @@
+:root {
+  --color-content-primary: #242934;
+  --color-content-secondary: #47576c;
+  --color-content-tertiary: #a6b3c5;
+  --color-background-primary: #fff;
+  --color-background-secondary: #dfe6ef;
+
+  --color-border-primary: #cdd5e1;
+  --color-border-interactive: #0089ff;
+
+  --color-interactive-background-primary: #394759;
+  --color-interactive-background-primary-hover: #242934;
+  --color-interactive-background-secondary: #cdd5e1;
+  --color-interactive-content: #0089ff;
+  --color-interactive-background: #e1f2fe;
+  --color-interactive-content-primary: #fff;
+
+  --color-indicator-error-content: #ff4444;
+  --color-indicator-error-background: #ffe5e5;
+
+  --color-indicator-alert-content: #ff8727;
+  --color-indicator-alert-background: #fdeacd;
+
+  --color-indicator-info-background: #fdeacd;
+  --color-indicator-info-primary: #ff8727;
+
+  --color-brand-primary: #33caaf;
+
+  --color-shadow-primary: #32325d;
+
+  --shadow-primary: 0 0 0 1px hsl(from var(--color-shadow-primary) h s l / 0.07),
+    0 3px 3px -1px hsl(from var(--color-shadow-primary) h s l / 0.12);
+
+  /* Radius */
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 8px;
+
+  /* Typography */
+  --text-size-m: 0.875rem; /* 14px */
+  --text-size-xl: 2.25rem; /* 36px */
+
+  /* Spaces */
+  --space-s: 0.25rem;
+  --space-m: 0.5rem;
+  --space-l: 0.75rem;
+  --space-xl: 1rem;
+  --space-xxl: 1.5rem;
+
+  /* Sizes */
+  --size-checkbox: 1.25rem;
+  --size-button: 2.5rem;
+
+  /* Misc */
+  /* TODO: probably replace */
+  --icon-checkbox: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 10 L8 14 L16 6' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  --icon-arrow-right: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.09998 8H12.1M12.1 8L8.09998 12M12.1 8L8.09998 4' stroke='%23242934' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  --image-background: url("../../assets/bgReisbalans.svg");
+
+  --opacity-disabled: 0.3;
+}

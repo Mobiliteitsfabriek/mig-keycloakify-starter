@@ -1,0 +1,28 @@
+body {
+  color: var(--color-content-primary);
+  font-size: var(--text-size-m);
+  --pf-global--FontSize--xs: var(--text-size-m);
+  font-family: Inter;
+}
+
+h1,
+.kcFormHeaderClass h1 {
+  font-family: Sperwer;
+  font-size: var(--text-size-xl);
+}
+
+.login-pf a {
+  color: var(--color-interactive-content);
+  border-radius: var(--radius-s);
+  transition: background-color var(--ease) var(--duration-short);
+
+  &:is(:hover, :focus-visible) {
+    color: var(--color-interactive-content);
+    background-color: var(--color-interactive-background);
+    text-decoration: none;
+  }
+}
+
+.text-tertiary {
+  color: var(--color-content-tertiary);
+}

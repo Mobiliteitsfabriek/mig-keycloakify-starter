@@ -1,0 +1,11 @@
+.kcBodyClass .pf-c-alert {
+  --pf-c-alert--m-inline--m-danger--BackgroundColor: var(--color-indicator-error-background);
+  --pf-c-alert__title--Color: var(--color-content-primary);
+
+  --pf-c-alert--m-inline--m-alert--BackgroundColor: var(--color-indicator-alert-background);
+  --pf-c-alert__title--Color: var(--color-content-primary);
+  --pf-c-alert__title--FontWeight: 400;
+
+  border: 1px solid var(--color-background-primary);
+  border-radius: var(--radius-l);
+}
