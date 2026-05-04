@@ -4,6 +4,7 @@ import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
 
 export default function LoginUsername(props: PageProps<Extract<KcContext, { pageId: "login-username.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -31,9 +32,7 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
         <div id="kc-registration">
           <span>
             {msg("noAccount")}
-            <a tabIndex={6} href={url.registrationUrl}>
-              {msg("doRegister")}
-            </a>
+            <a href={url.registrationUrl}>{msg("doRegister")}</a>
           </span>
         </div>
       }
@@ -100,7 +99,6 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
                         : msg("email")}
                   </label>
                   <input
-                    tabIndex={2}
                     id="username"
                     className={kcClsx("kcInputClass")}
                     name="username"
@@ -121,25 +119,15 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
               <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
                 <div id="kc-form-options">
                   {realm.rememberMe && !usernameHidden && (
-                    <div className="checkbox">
-                      <label>
-                        <input
-                          tabIndex={3}
-                          id="rememberMe"
-                          name="rememberMe"
-                          type="checkbox"
-                          defaultChecked={!!login.rememberMe}
-                        />{" "}
-                        {msg("rememberMe")}
-                      </label>
-                    </div>
+                    <Checkbox id="rememberMe" name="rememberMe" defaultSelected={!!login.rememberMe}>
+                      {msg("rememberMe")}
+                    </Checkbox>
                   )}
                 </div>
               </div>
 
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
                 <input
-                  tabIndex={4}
                   disabled={isLoginButtonDisabled}
                   className={kcClsx(
                     "kcButtonClass",
