@@ -9,6 +9,7 @@ import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
 import { PlatformLogo } from "./components/PlatformLogo";
 import { ThemeProvider } from "@Mobiliteitsfabriek/aria-theme";
+import { Banner } from "@Mobiliteitsfabriek/web-banner";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
   const {
@@ -129,26 +130,14 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
           </header>
           {/* App-initiated actions should not see warning messages about the need to complete the action during login. */}
           {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
-            <div
-              className={clsx(
-                `alert-${message.type}`,
-                kcClsx("kcAlertClass"),
-                `pf-m-${message?.type === "error" ? "danger" : message.type}`
-              )}
-            >
-              <div className="pf-c-alert__icon">
-                {message.type === "success" && <span className={kcClsx("kcFeedbackSuccessIcon")}></span>}
-                {message.type === "warning" && <span className={kcClsx("kcFeedbackWarningIcon")}></span>}
-                {message.type === "error" && <span className={kcClsx("kcFeedbackErrorIcon")}></span>}
-                {message.type === "info" && <span className={kcClsx("kcFeedbackInfoIcon")}></span>}
-              </div>
+            <Banner variant={message.type}>
               <span
                 className={kcClsx("kcAlertTitleClass")}
                 dangerouslySetInnerHTML={{
                   __html: kcSanitize(message.summary),
                 }}
               />
-            </div>
+            </Banner>
           )}
           <div id="kc-content">
             {auth !== undefined && auth.showUsername && !auth.showResetCredentials && (
