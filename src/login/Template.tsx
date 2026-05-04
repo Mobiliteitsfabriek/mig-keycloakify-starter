@@ -10,6 +10,7 @@ import type { KcContext } from "./KcContext";
 import { PlatformLogo } from "./components/PlatformLogo";
 import { ThemeProvider } from "@Mobiliteitsfabriek/aria-theme";
 import { Banner } from "@Mobiliteitsfabriek/web-banner";
+import Sheet from "@Mobiliteitsfabriek/web-icon/sprite.svg";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
   const {
@@ -58,6 +59,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
   return (
     <div className={kcClsx("kcLoginClass")}>
+      <Sheet />
       <div className={kcClsx("kcFormCardClass")}>
         <ThemeProvider prefix="">
           <header className={kcClsx("kcFormHeaderClass")}>
