@@ -59,7 +59,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
   return (
     <div className={kcClsx("kcLoginClass")}>
-      <Sheet />
+      <div style={{ position: "absolute" }}>
+        <Sheet />
+      </div>
       <div className={kcClsx("kcFormCardClass")}>
         <ThemeProvider prefix="">
           <header className={kcClsx("kcFormHeaderClass")}>
