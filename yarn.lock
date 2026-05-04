@@ -62,7 +62,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/web-icon@npm:0.1.2":
+"@Mobiliteitsfabriek/web-icon@npm:0.1.2, @Mobiliteitsfabriek/web-icon@npm:^0.1.2":
   version: 0.1.2
   resolution: "@Mobiliteitsfabriek/web-icon@npm:0.1.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-icon%2F0.1.2%2F29767e961c3cfd327f39eb1d48708a72475ba811"
   dependencies:
@@ -6348,6 +6348,7 @@ __metadata:
     "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.7"
     "@Mobiliteitsfabriek/web-banner": "npm:^0.1.0"
     "@Mobiliteitsfabriek/web-checkbox": "npm:^0.1.1"
+    "@Mobiliteitsfabriek/web-icon": "npm:^0.1.2"
     "@eslint/js": "npm:^9.15.0"
     "@storybook/react": "npm:^8.1.10"
     "@storybook/react-vite": "npm:^8.1.10"
