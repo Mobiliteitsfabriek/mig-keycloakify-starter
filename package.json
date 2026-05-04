@@ -18,6 +18,8 @@
     "license": "MIT",
     "keywords": [],
     "dependencies": {
+        "@Mobiliteitsfabriek/aria-theme": "0.1.6-pr76.431",
+        "@Mobiliteitsfabriek/web-checkbox": "0.0.0-pr88.435",
         "keycloakify": "^11.9.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
