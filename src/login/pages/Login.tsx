@@ -7,6 +7,7 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -35,10 +36,7 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
         <div id="kc-registration-container">
           <div id="kc-registration">
             <span>
-              {msg("noAccount")}{" "}
-              <a tabIndex={8} href={url.registrationUrl}>
-                {msg("doRegister")}
-              </a>
+              {msg("noAccount")} <a href={url.registrationUrl}>{msg("doRegister")}</a>
             </span>
           </div>
         </div>
@@ -104,7 +102,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                         : msg("email")}
                   </label>
                   <input
-                    tabIndex={2}
                     id="username"
                     className={kcClsx("kcInputClass")}
                     name="username"
@@ -133,7 +130,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
                 </label>
                 <PasswordWrapper kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
                   <input
-                    tabIndex={3}
                     id="password"
                     className={kcClsx("kcInputClass")}
                     name="password"
@@ -157,26 +153,15 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
               <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
                 <div id="kc-form-options">
                   {realm.rememberMe && !usernameHidden && (
-                    <div className="checkbox">
-                      <label>
-                        <input
-                          tabIndex={5}
-                          id="rememberMe"
-                          name="rememberMe"
-                          type="checkbox"
-                          defaultChecked={!!login.rememberMe}
-                        />{" "}
-                        {msg("rememberMe")}
-                      </label>
-                    </div>
+                    <Checkbox id="rememberMe" name="rememberMe" defaultSelected={!!login.rememberMe}>
+                      {msg("rememberMe")}
+                    </Checkbox>
                   )}
                 </div>
                 <div className={kcClsx("kcFormOptionsWrapperClass")}>
                   {realm.resetPasswordAllowed && (
                     <span>
-                      <a tabIndex={6} href={url.loginResetCredentialsUrl}>
-                        {msg("doForgotPassword")}
-                      </a>
+                      <a href={url.loginResetCredentialsUrl}>{msg("doForgotPassword")}</a>
                     </span>
                   )}
                 </div>
@@ -185,7 +170,6 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
                 <input type="hidden" id="id-hidden-input" name="credentialId" value={auth.selectedCredential} />
                 <input
-                  tabIndex={7}
                   disabled={isLoginButtonDisabled}
                   className={kcClsx(
                     "kcButtonClass",
