@@ -10,6 +10,14 @@ hr {
   display: none;
 }
 
+body svg:not(:root) {
+  /* Override default styling
+      Default (defined by patternfly) is overflow: hidden;
+      We use our own icons, so we can remove the default styling and use our own
+  */
+  overflow: visible;
+}
+
 #root,
 #storybook-root {
   background-color: var(--color-background-primary);
