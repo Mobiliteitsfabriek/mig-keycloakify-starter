@@ -5,44 +5,34 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@Mobiliteitsfabriek/aria-theme@npm:0.1.6-pr76.431":
-  version: 0.1.6-pr76.431
-  resolution: "@Mobiliteitsfabriek/aria-theme@npm:0.1.6-pr76.431::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Faria-theme%2F0.1.6-pr76.431%2F08b1d3212e7ed1df3926b0264cdfe7ba1b09f7ab"
+"@Mobiliteitsfabriek/aria-theme@npm:^0.1.7":
+  version: 0.1.7
+  resolution: "@Mobiliteitsfabriek/aria-theme@npm:0.1.7::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Faria-theme%2F0.1.7%2F4bc0bb3477b455d409de7050868a95e537fcd219"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/ba7f6cff88fb680b6c13532a6c5a2dec632755f17f3a50a47d5e2419952a40dcb8879ed2569c435140d40348fb82cb018b534672b9d0eb99d7256d356bae7a85
+  checksum: 10c0/24d91f3165e668f77005aed53a8f261f593ffeb966cd6646e658b718fd367532fd5922f4fe3024d7cce5a9bd8a6a338172c19dd211a5c7aa60f3865ecb681229
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/aria-theme@npm:^0.1.6":
-  version: 0.1.6
-  resolution: "@Mobiliteitsfabriek/aria-theme@npm:0.1.6::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Faria-theme%2F0.1.6%2F107743f8bf3e136ce89c360c003ae48002b08dfb"
-  peerDependencies:
-    react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/211701843e4e19bc66ffb7fc35a4275cea8f67459067ea6c575332e333c89ba28dccc8deb3bf7185d4f4cfbd55d5050a79d92084c3913f510346f778866e2a0f
+"@Mobiliteitsfabriek/tokens@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@Mobiliteitsfabriek/tokens@npm:0.2.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Ftokens%2F0.2.0%2Ff2e2d3a3020c973501bd7e1a391f1c4f30c4acf7"
+  checksum: 10c0/bdd511a9687747294c46cf726ec4168e5c4d12eb0560a5e98fed94a5aad5e597e03e82bfbc3a458a798c858a765de194f718c026937dfdebc53f4fc9eedffb49
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/tokens@npm:^0.1.1":
+"@Mobiliteitsfabriek/web-checkbox@npm:^0.1.1":
   version: 0.1.1
-  resolution: "@Mobiliteitsfabriek/tokens@npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Ftokens%2F0.1.1%2Fe6c7744b06509b8c32d5aaa830a1530c6abc0ebc"
-  checksum: 10c0/fcc397f0668ddbf4303f25ab3f0ea1d271986503d5dfc7884e9af1e4abe1cb9e4299e1ce2217687810373cde22c0a56e18d2dafcaae2e378571c9d48943c313c
-  languageName: node
-  linkType: hard
-
-"@Mobiliteitsfabriek/web-checkbox@npm:0.0.0-pr88.435":
-  version: 0.0.0-pr88.435
-  resolution: "@Mobiliteitsfabriek/web-checkbox@npm:0.0.0-pr88.435::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-checkbox%2F0.0.0-pr88.435%2Fccc95a138d4ab2be58ccf8ddb481825803fd6796"
+  resolution: "@Mobiliteitsfabriek/web-checkbox@npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-checkbox%2F0.1.1%2Fbc8bcaec740279d9172da37dec91208a2c40c599"
   dependencies:
-    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.6"
-    "@Mobiliteitsfabriek/tokens": "npm:^0.1.1"
+    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.7"
+    "@Mobiliteitsfabriek/tokens": "npm:^0.2.0"
     react-aria-components: "npm:^1.16.0"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/e93a0596ee8b31a19b21e20483e0807bd3ce0105585bac475d2fa1bd015f7487c89f5518615f0adf396851eb1ddf1d5b113f840992c4e3963cfc363325d368d8
+  checksum: 10c0/37062b77d094bfc82aa45f2c2cf7dda3e3c4b366e1c59100b18fa80a72963ecd4f16a9494c0c0881024f57a182595d48859c81b3341f485949fd61a7ccea1b49
   languageName: node
   linkType: hard
 
@@ -6304,8 +6294,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "keycloakify-starter@workspace:."
   dependencies:
-    "@Mobiliteitsfabriek/aria-theme": "npm:0.1.6-pr76.431"
-    "@Mobiliteitsfabriek/web-checkbox": "npm:0.0.0-pr88.435"
+    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.7"
+    "@Mobiliteitsfabriek/web-checkbox": "npm:^0.1.1"
     "@eslint/js": "npm:^9.15.0"
     "@storybook/react": "npm:^8.1.10"
     "@storybook/react-vite": "npm:^8.1.10"
