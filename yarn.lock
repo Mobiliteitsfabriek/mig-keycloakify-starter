@@ -5,7 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@Mobiliteitsfabriek/aria-theme@npm:0.1.8, @Mobiliteitsfabriek/aria-theme@npm:^0.1, @Mobiliteitsfabriek/aria-theme@npm:^0.1.8":
+"@Mobiliteitsfabriek/aria-theme@npm:0.1.8, @Mobiliteitsfabriek/aria-theme@npm:^0.1, @Mobiliteitsfabriek/aria-theme@npm:^0.1.8, @Mobiliteitsfabriek/aria-theme@npm:^0.1.8-pr94.452":
   version: 0.1.8
   resolution: "@Mobiliteitsfabriek/aria-theme@npm:0.1.8::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Faria-theme%2F0.1.8%2Feaf25fcf24c156fb58bda6f8addbe36cbd95db61"
   peerDependencies:
@@ -35,17 +35,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/component-utils@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "@Mobiliteitsfabriek/component-utils@npm:0.1.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fcomponent-utils%2F0.1.2%2Fc79791ba4e16e98f7e56b273cd6b65044d43632e"
-  peerDependencies:
-    react: ^18.0.0 || ^19.0.0
-    react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/19c3272dbace9bbf22211b00627b697b0d8e87fb9d37ffff882185ff4396457af065529a7abc4a47888656b89f6f46e23a5db46c824e25bf40e952a3860b8cb0
-  languageName: node
-  linkType: hard
-
-"@Mobiliteitsfabriek/tokens@npm:0.2.1":
+"@Mobiliteitsfabriek/tokens@npm:0.2.1, @Mobiliteitsfabriek/tokens@npm:^0.2.1":
   version: 0.2.1
   resolution: "@Mobiliteitsfabriek/tokens@npm:0.2.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Ftokens%2F0.2.1%2Fd43d60a58fdb408be54611fdc7d4ed994607da54"
   checksum: 10c0/98ce9dcefff90121c35d292369581551d4419652ef4ebf59f7db98ec56512bc231f85a0b5e53700850304bd57b5cbebcd7a21f47720caf845e8c6fc0068499cd
@@ -89,20 +79,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/web-icon@npm:0.1.2-pr92.448":
-  version: 0.1.2-pr92.448
-  resolution: "@Mobiliteitsfabriek/web-icon@npm:0.1.2-pr92.448::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-icon%2F0.1.2-pr92.448%2F358742eb5a29e12427c7ce3baae4e252af76fbf7"
+"@Mobiliteitsfabriek/web-field-error@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@Mobiliteitsfabriek/web-field-error@npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-field-error%2F0.1.1%2F51f0bd6b7cb4a37041e453b78422c827f5857aa0"
   dependencies:
-    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.7"
-    "@Mobiliteitsfabriek/component-utils": "npm:^0.1.2"
+    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.8"
+    "@Mobiliteitsfabriek/component-utils": "npm:^0.1.3"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
+    react-aria-components: ^1.16.0
     react-dom: ^18.0.0 || ^19.0.0
-  checksum: 10c0/df07e0c91777cee0d13762aab4e39bb7d42286b32363ed1bf6b87ff5f10738ad5919fff5ecf1eefd98784253ebdcb46bfa419ba8cea10df7794066b8531bde41
+  checksum: 10c0/62f7c09a60c957c26514192da69f0bac9b3a32edb49cbec3856378eb9330c4f0702fd6934a7de9e1839c3b734389a3001423d88cb969748565c1fd326f897719
   languageName: node
   linkType: hard
 
-"@Mobiliteitsfabriek/web-icon@npm:0.1.3":
+"@Mobiliteitsfabriek/web-icon@npm:0.1.3, @Mobiliteitsfabriek/web-icon@npm:^0.1.3-pr94.452":
   version: 0.1.3
   resolution: "@Mobiliteitsfabriek/web-icon@npm:0.1.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-icon%2F0.1.3%2F850f02f80e0b918752a563b4bd2bd2181f1bd0e8"
   dependencies:
@@ -115,6 +106,53 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@Mobiliteitsfabriek/web-icon@npm:0.1.3-pr94.452":
+  version: 0.1.3-pr94.452
+  resolution: "@Mobiliteitsfabriek/web-icon@npm:0.1.3-pr94.452::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-icon%2F0.1.3-pr94.452%2Fd4ae098e7b1beddf875cccb331a5e0d214203762"
+  dependencies:
+    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.8-pr94.452"
+    "@Mobiliteitsfabriek/component-utils": "npm:^0.1.3"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/0df27153de41a87d07dd0da28d06fdf376ec11a8d104e98aa2c4df99367d927bc5affe5e729b517f78f2115ea639b7201bf53e6d6a35de3938a62c698200cbc8
+  languageName: node
+  linkType: hard
+
+"@Mobiliteitsfabriek/web-label@npm:^0.1.8-pr94.452":
+  version: 0.1.8
+  resolution: "@Mobiliteitsfabriek/web-label@npm:0.1.8::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-label%2F0.1.8%2F7fd8752998f8f16b7c03ac2249d16f8baa82aa52"
+  dependencies:
+    "@Mobiliteitsfabriek/aria-theme": "npm:0.1.8"
+    "@Mobiliteitsfabriek/component-utils": "npm:0.1.3"
+    "@Mobiliteitsfabriek/tokens": "npm:^0.2.1"
+    react-aria-components: "npm:^1.16.0"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/8139f1c1388fc226b48b82f6617595275b9ae91747e72510a2f3afe39e1db6c24fa7e070580bb28169563c54e858bbfb1af8a2baddce1051438a7ab3f8be3ed9
+  languageName: node
+  linkType: hard
+
+"@Mobiliteitsfabriek/web-text-field@npm:0.1.2-pr94.452":
+  version: 0.1.2-pr94.452
+  resolution: "@Mobiliteitsfabriek/web-text-field@npm:0.1.2-pr94.452::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-text-field%2F0.1.2-pr94.452%2F5d1a453422946039ab3bacdfa674288c39bc28ec"
+  dependencies:
+    "@Mobiliteitsfabriek/aria-theme": "npm:^0.1.8-pr94.452"
+    "@Mobiliteitsfabriek/component-utils": "npm:^0.1.3"
+    "@Mobiliteitsfabriek/tokens": "npm:^0.2.1"
+    "@Mobiliteitsfabriek/web-field-error": "npm:^0.1.1"
+    "@Mobiliteitsfabriek/web-icon": "npm:^0.1.3-pr94.452"
+    "@Mobiliteitsfabriek/web-label": "npm:^0.1.8-pr94.452"
+    "@Mobiliteitsfabriek/web-utility-classes": "npm:^0.1.1"
+    react-aria-components: "npm:^1.16.0"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/798466876f6a5861643215f9517bb89965d9cb5ca5c78525ad0984b4ab2fecff8e299f0ad54b1b1d9fd1f0f670fefb7ea8437d9f49dde1f4114491189f53c51a
+  languageName: node
+  linkType: hard
+
 "@Mobiliteitsfabriek/web-typography@npm:0.1.1":
   version: 0.1.1
   resolution: "@Mobiliteitsfabriek/web-typography@npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-typography%2F0.1.1%2Fa0d9d247a43339c44c3b15ca7044dbc28db4da0f"
@@ -124,6 +162,13 @@ __metadata:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   checksum: 10c0/61f0cb89d3216cee0d8644bcb08082512493936e28131eae3ef65fbc7651b6a86336bb61a59f228b06da7d0b252e45f5d1ce182620297aa6d6e2d0845ed729f4
+  languageName: node
+  linkType: hard
+
+"@Mobiliteitsfabriek/web-utility-classes@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@Mobiliteitsfabriek/web-utility-classes@npm:0.1.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40Mobiliteitsfabriek%2Fweb-utility-classes%2F0.1.1%2Ff310b60e85a4565fe907f77b700b53dc03c0ca2d"
+  checksum: 10c0/02820f0e66c9f5e3fa627e9d62c3fff712095e6dfd6a0340904aba770d0f797f443e5f52af2bacb71c7a520b05e721d6dc0dbd3a151b2aef7c449bdd82ef3348
   languageName: node
   linkType: hard
 
@@ -6945,7 +6990,8 @@ __metadata:
     "@Mobiliteitsfabriek/aria-theme": "npm:^0.1"
     "@Mobiliteitsfabriek/web-banner": "npm:^0.1"
     "@Mobiliteitsfabriek/web-checkbox": "npm:^0.1"
-    "@Mobiliteitsfabriek/web-icon": "npm:0.1.2-pr92.448"
+    "@Mobiliteitsfabriek/web-icon": "npm:0.1.3-pr94.452"
+    "@Mobiliteitsfabriek/web-text-field": "npm:0.1.2-pr94.452"
     "@eslint/js": "npm:^9.15.0"
     "@storybook/react": "npm:^8.1.10"
     "@storybook/react-vite": "npm:^8.1.10"

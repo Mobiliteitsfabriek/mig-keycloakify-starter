@@ -6,6 +6,7 @@ import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
 import { Icon } from "@Mobiliteitsfabriek/web-icon";
+import { EmailField } from "@Mobiliteitsfabriek/web-text-field";
 
 export default function LoginUsername(props: PageProps<Extract<KcContext, { pageId: "login-username.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -84,38 +85,31 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
             <form
               id="kc-form-login"
               onSubmit={() => {
+                console.log("hgauehgueahgkuaeghkua");
                 setIsLoginButtonDisabled(true);
                 return true;
               }}
               action={url.loginAction}
               method="post"
             >
-              {!usernameHidden && (
-                <div className={kcClsx("kcFormGroupClass")}>
-                  <label htmlFor="username" className={kcClsx("kcLabelClass")}>
-                    {!realm.loginWithEmailAllowed
-                      ? msg("username")
-                      : !realm.registrationEmailAsUsername
-                        ? msg("usernameOrEmail")
-                        : msg("email")}
-                  </label>
-                  <input
-                    id="username"
-                    className={kcClsx("kcInputClass")}
-                    name="username"
-                    defaultValue={login.username ?? ""}
-                    type="text"
-                    autoFocus
-                    autoComplete="username"
-                    aria-invalid={messagesPerField.existsError("username")}
-                  />
-                  {messagesPerField.existsError("username") && (
-                    <span id="input-error" className={kcClsx("kcInputErrorMessageClass")} aria-live="polite">
-                      {messagesPerField.getFirstError("username")}
-                    </span>
-                  )}
-                </div>
-              )}
+              <EmailField
+                hideLabel
+                label={
+                  !realm.loginWithEmailAllowed
+                    ? msgStr("username")
+                    : !realm.registrationEmailAsUsername
+                      ? msgStr("usernameOrEmail")
+                      : msgStr("email")
+                }
+                placeholder={msgStr("email")}
+                id="username"
+                name="username"
+                defaultValue={login.username ?? ""}
+                autoFocus
+                autoComplete="username"
+                isInvalid={messagesPerField.existsError("username") || undefined}
+                errorMessage={messagesPerField.getFirstError("username")}
+              />
 
               <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
                 <div id="kc-form-options">
