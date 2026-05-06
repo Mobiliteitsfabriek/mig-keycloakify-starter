@@ -11,6 +11,7 @@ import { PlatformLogo } from "./components/PlatformLogo";
 import { ThemeProvider } from "@Mobiliteitsfabriek/aria-theme";
 import { Banner } from "@Mobiliteitsfabriek/web-banner";
 import Sheet from "@Mobiliteitsfabriek/web-icon/sprite.svg";
+import { Icon } from "@Mobiliteitsfabriek/web-icon";
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
   const {
@@ -146,9 +147,14 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
           <div id="kc-content">
             {auth !== undefined && auth.showUsername && !auth.showResetCredentials && (
               <div id="kc-username" className={kcClsx("kcFormGroupClass")}>
-                <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
+                <a
+                  id="reset-login"
+                  className="back-button"
+                  href={url.loginRestartFlowUrl}
+                  aria-label={msgStr("restartLoginTooltip")}
+                >
                   <div className="kc-login-tooltip">
-                    <i className={kcClsx("kcResetFlowIcon")}></i>
+                    <Icon size="14px" name="arrow-left" />
                     <span className="kc-tooltip-text">{msg("restartLoginTooltip")}</span>
                   </div>
                 </a>

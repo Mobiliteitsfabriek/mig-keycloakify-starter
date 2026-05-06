@@ -18,10 +18,10 @@
     "license": "MIT",
     "keywords": [],
     "dependencies": {
-        "@Mobiliteitsfabriek/aria-theme": "^0.1.7",
-        "@Mobiliteitsfabriek/web-banner": "^0.1.0",
-        "@Mobiliteitsfabriek/web-checkbox": "^0.1.1",
-        "@Mobiliteitsfabriek/web-icon": "^0.1.2",
+        "@Mobiliteitsfabriek/aria-theme": "^0.1",
+        "@Mobiliteitsfabriek/web-banner": "^0.1",
+        "@Mobiliteitsfabriek/web-checkbox": "^0.1",
+        "@Mobiliteitsfabriek/web-icon": "0.1.2-pr92.450",
         "keycloakify": "^11.9.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
