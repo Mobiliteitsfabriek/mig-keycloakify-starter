@@ -2,6 +2,11 @@
   --background-color: var(--color-interactive-background-primary);
   --height: var(--size-button);
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-m);
+
   background-color: var(--background-color);
   border: none;
   color: var(--color-interactive-content-primary);

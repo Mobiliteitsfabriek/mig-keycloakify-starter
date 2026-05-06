@@ -8,6 +8,7 @@ import "./styles/tokens/main.css";
 import "./styles/main.css";
 import LoginUsername from "./pages/LoginUsername";
 import Login from "./pages/Login";
+import LoginPassword from "./pages/LoginPassword";
 
 const UserProfileFormFields = lazy(() => import("keycloakify/login/UserProfileFormFields"));
 
@@ -32,6 +33,8 @@ export default function KcPage(props: { kcContext: KcContext }) {
     <Suspense>
       {(() => {
         switch (kcContext.pageId) {
+          case "login-password.ftl":
+            return <LoginPassword {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss />;
           case "login.ftl":
             return <Login {...{ kcContext, i18n, classes }} Template={Template} doUseDefaultCss />;
           case "login-username.ftl":
