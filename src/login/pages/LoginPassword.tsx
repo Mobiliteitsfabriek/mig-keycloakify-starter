@@ -50,7 +50,6 @@ export default function LoginPassword(props: PageProps<Extract<KcContext, { page
 
               <PasswordWrapper kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
                 <input
-                  tabIndex={2}
                   id="password"
                   className={kcClsx("kcInputClass")}
                   name="password"
@@ -77,16 +76,13 @@ export default function LoginPassword(props: PageProps<Extract<KcContext, { page
               <div className={kcClsx("kcFormOptionsWrapperClass")}>
                 {realm.resetPasswordAllowed && (
                   <span>
-                    <a tabIndex={5} href={url.loginResetCredentialsUrl}>
-                      {msg("doForgotPassword")}
-                    </a>
+                    <a href={url.loginResetCredentialsUrl}>{msg("doForgotPassword")}</a>
                   </span>
                 )}
               </div>
             </div>
             <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
               <input
-                tabIndex={4}
                 className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonBlockClass", "kcButtonLargeClass")}
                 name="login"
                 id="kc-login"
