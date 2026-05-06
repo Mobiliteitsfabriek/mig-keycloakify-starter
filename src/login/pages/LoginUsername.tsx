@@ -5,6 +5,7 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
+import { Icon } from "@Mobiliteitsfabriek/web-icon";
 
 export default function LoginUsername(props: PageProps<Extract<KcContext, { pageId: "login-username.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -127,7 +128,9 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
               </div>
 
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
-                <input
+                <button
+                  name="login"
+                  id="kc-login"
                   disabled={isLoginButtonDisabled}
                   className={kcClsx(
                     "kcButtonClass",
@@ -135,11 +138,11 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
                     "kcButtonBlockClass",
                     "kcButtonLargeClass"
                   )}
-                  name="login"
-                  id="kc-login"
                   type="submit"
-                  value={msgStr("doLogIn")}
-                />
+                >
+                  {msgStr("doLogIn")}
+                  <Icon name="arrow-right" />
+                </button>
               </div>
             </form>
           )}
