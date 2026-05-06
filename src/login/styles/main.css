@@ -24,6 +24,19 @@ body svg:not(:root) {
   padding: var(--space-m);
 }
 
+#kc-username {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: var(--color-content-primary);
+  }
+
+  label {
+    margin: 0;
+  }
+}
+
 #kc-content-wrapper,
 #kc-form-wrapper {
   margin: 0;

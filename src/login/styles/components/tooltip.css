@@ -1,0 +1,25 @@
+.login-pf a.back-button {
+  --size: 16px;
+  --background-color: var(--color-interactive-background-secondary);
+
+  display: grid;
+  place-items: center;
+  background-color: var(--background-color);
+  border-radius: 9999px;
+  block-size: var(--size);
+  inline-size: var(--size);
+
+  .kc-login-tooltip {
+    display: grid;
+    place-items: center;
+  }
+
+  & > * {
+    block-size: var(--size);
+    inline-size: var(--size);
+  }
+
+  &:is(:hover, :focus-visible) {
+    --background-color: var(--color-interactive-background-secondary-hover);
+  }
+}
