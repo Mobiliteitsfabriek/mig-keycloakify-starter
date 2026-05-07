@@ -85,7 +85,6 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
             <form
               id="kc-form-login"
               onSubmit={() => {
-                console.log("hgauehgueahgkuaeghkua");
                 setIsLoginButtonDisabled(true);
                 return true;
               }}
