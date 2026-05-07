@@ -7,6 +7,7 @@ import type { I18n } from "../i18n";
 import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
 import { Icon } from "@Mobiliteitsfabriek/web-icon";
 import { EmailField } from "@Mobiliteitsfabriek/web-text-field";
+import { Button } from "@Mobiliteitsfabriek/web-button";
 
 export default function LoginUsername(props: PageProps<Extract<KcContext, { pageId: "login-username.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -121,21 +122,10 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
               </div>
 
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
-                <button
-                  name="login"
-                  id="kc-login"
-                  disabled={isLoginButtonDisabled}
-                  className={kcClsx(
-                    "kcButtonClass",
-                    "kcButtonPrimaryClass",
-                    "kcButtonBlockClass",
-                    "kcButtonLargeClass"
-                  )}
-                  type="submit"
-                >
+                <Button name="login" id="kc-login" isDisabled={isLoginButtonDisabled} type="submit">
                   {msgStr("doLogIn")}
                   <Icon name="arrow-right" />
-                </button>
+                </Button>
               </div>
             </form>
           )}
