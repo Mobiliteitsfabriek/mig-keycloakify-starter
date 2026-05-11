@@ -7,9 +7,6 @@
         "url": "git://github.com/codegouvfr/keycloakify-starter.git"
     },
     "type": "module",
-    "resolutions": {
-        "@Mobiliteitsfabriek/web-icon": "0.1.3-pr94.452"
-    },
     "scripts": {
         "dev": "vite",
         "dev:docker": "yarn keycloakify start-keycloak",
@@ -23,6 +20,7 @@
     "dependencies": {
         "@Mobiliteitsfabriek/aria-theme": "^0.1.9",
         "@Mobiliteitsfabriek/web-banner": "^0.1.3",
+        "@Mobiliteitsfabriek/web-button": "^0.2.2",
         "@Mobiliteitsfabriek/web-checkbox": "^0.1.1",
         "@Mobiliteitsfabriek/web-icon": "^0.2.0",
         "@Mobiliteitsfabriek/web-text-field": "^0.2.0",
