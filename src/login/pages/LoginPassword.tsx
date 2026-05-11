@@ -7,6 +7,7 @@ import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
+import { PasswordField } from "@Mobiliteitsfabriek/web-text-field";
 
 export default function LoginPassword(props: PageProps<Extract<KcContext, { pageId: "login-password.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -43,33 +44,14 @@ export default function LoginPassword(props: PageProps<Extract<KcContext, { page
             method="post"
           >
             <div className={clsx(kcClsx("kcFormGroupClass"), "no-bottom-margin")}>
-              <hr />
-              <label htmlFor="password" className={kcClsx("kcLabelClass")}>
-                {msg("password")}
-              </label>
-
-              <PasswordWrapper kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
-                <input
-                  id="password"
-                  className={kcClsx("kcInputClass")}
-                  name="password"
-                  type="password"
-                  autoFocus
-                  autoComplete="on"
-                  aria-invalid={messagesPerField.existsError("username", "password")}
-                />
-              </PasswordWrapper>
-
-              {messagesPerField.existsError("password") && (
-                <span
-                  id="input-error-password"
-                  className={kcClsx("kcInputErrorMessageClass")}
-                  aria-live="polite"
-                  dangerouslySetInnerHTML={{
-                    __html: kcSanitize(messagesPerField.get("password")),
-                  }}
-                />
-              )}
+              <PasswordField
+                id="password"
+                name="password"
+                autoFocus
+                autoComplete="on"
+                isInvalid={messagesPerField.existsError("username", "password")}
+                errorMessage={kcSanitize(messagesPerField.get("password"))}
+              />
             </div>
             <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
               <div id="kc-form-options" />
