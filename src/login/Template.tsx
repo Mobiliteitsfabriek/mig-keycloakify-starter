@@ -56,15 +56,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     return null;
   }
 
-  console.log(msgStr("contact"));
-
   return (
-    <div className={kcClsx("kcLoginClass")}>
-      <div style={{ position: "absolute" }}>
-        <Sheet />
-      </div>
-      <div className={kcClsx("kcFormCardClass")}>
-        <ThemeProvider prefix="">
+    <ThemeProvider className="theme-provider" prefix="">
+      <div className={kcClsx("kcLoginClass")}>
+        <div style={{ position: "absolute" }}>
+          <Sheet />
+        </div>
+        <div className={kcClsx("kcFormCardClass")}>
           <header className={kcClsx("kcFormHeaderClass")}>
             <div id="kc-header" className={kcClsx("kcHeaderClass")}>
               <div id="kc-header-wrapper" className={kcClsx("kcHeaderWrapperClass")}>
@@ -189,13 +187,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
               </div>
             )}
           </div>
-        </ThemeProvider>
+        </div>
+        <p className="login-trouble">
+          {msg("loginProblems")}
+          <br />
+          {msg("contactIfProblem1")} <a href="">{msg("contact")}</a> {msg("contactIfProblem2")}
+        </p>
       </div>
-      <p className="login-trouble">
-        {msg("loginProblems")}
-        <br />
-        {msg("contactIfProblem1")} <a href="">{msg("contact")}</a> {msg("contactIfProblem2")}
-      </p>
-    </div>
+    </ThemeProvider>
   );
 }
