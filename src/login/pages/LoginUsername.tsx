@@ -123,8 +123,10 @@ export default function LoginUsername(props: PageProps<Extract<KcContext, { page
 
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
                 <Button name="login" id="kc-login" isDisabled={isLoginButtonDisabled} type="submit">
-                  {msgStr("doLogIn")}
-                  <Icon name="arrow-right" />
+                  <span className="flex-row">
+                    {msgStr("doLogIn")}
+                    <Icon name="arrow-right" size="16px" />
+                  </span>
                 </Button>
               </div>
             </form>
