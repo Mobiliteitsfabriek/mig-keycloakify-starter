@@ -21,7 +21,7 @@ body svg:not(:root) {
 #root,
 #storybook-root {
   background-color: var(--color-background-primary);
-  padding: var(--space-m);
+  padding: var(--space-xxl);
 }
 
 .theme-provider {
