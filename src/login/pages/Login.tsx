@@ -1,13 +1,13 @@
-import type { JSX } from "keycloakify/tools/JSX";
 import { useState } from "react";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
-import { useIsPasswordRevealed } from "keycloakify/tools/useIsPasswordRevealed";
 import { clsx } from "keycloakify/tools/clsx";
 import type { PageProps } from "keycloakify/login/pages/PageProps";
-import { getKcClsx, type KcClsx } from "keycloakify/login/lib/kcClsx";
+import { getKcClsx } from "keycloakify/login/lib/kcClsx";
 import type { KcContext } from "../KcContext";
 import type { I18n } from "../i18n";
 import { Checkbox } from "@Mobiliteitsfabriek/web-checkbox";
+import { Button } from "@Mobiliteitsfabriek/web-button";
+import { EmailField, PasswordField } from "@Mobiliteitsfabriek/web-text-field";
 
 export default function Login(props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>) {
   const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
@@ -94,60 +94,33 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
             >
               {!usernameHidden && (
                 <div className={kcClsx("kcFormGroupClass")}>
-                  <label htmlFor="username" className={kcClsx("kcLabelClass")}>
-                    {!realm.loginWithEmailAllowed
-                      ? msg("username")
-                      : !realm.registrationEmailAsUsername
-                        ? msg("usernameOrEmail")
-                        : msg("email")}
-                  </label>
-                  <input
+                  <EmailField
+                    label={
+                      !realm.loginWithEmailAllowed
+                        ? msgStr("username")
+                        : !realm.registrationEmailAsUsername
+                          ? msgStr("usernameOrEmail")
+                          : msgStr("email")
+                    }
                     id="username"
-                    className={kcClsx("kcInputClass")}
                     name="username"
-                    defaultValue={login.username ?? ""}
-                    type="text"
                     autoFocus
                     autoComplete="username"
-                    aria-invalid={messagesPerField.existsError("username", "password")}
+                    isInvalid={messagesPerField.existsError("username", "password")}
+                    errorMessage={kcSanitize(messagesPerField.getFirstError("username", "password"))}
                   />
-                  {messagesPerField.existsError("username", "password") && (
-                    <span
-                      id="input-error"
-                      className={kcClsx("kcInputErrorMessageClass")}
-                      aria-live="polite"
-                      dangerouslySetInnerHTML={{
-                        __html: kcSanitize(messagesPerField.getFirstError("username", "password")),
-                      }}
-                    />
-                  )}
                 </div>
               )}
 
               <div className={kcClsx("kcFormGroupClass")}>
-                <label htmlFor="password" className={kcClsx("kcLabelClass")}>
-                  {msg("password")}
-                </label>
-                <PasswordWrapper kcClsx={kcClsx} i18n={i18n} passwordInputId="password">
-                  <input
-                    id="password"
-                    className={kcClsx("kcInputClass")}
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    aria-invalid={messagesPerField.existsError("username", "password")}
-                  />
-                </PasswordWrapper>
-                {usernameHidden && messagesPerField.existsError("username", "password") && (
-                  <span
-                    id="input-error"
-                    className={kcClsx("kcInputErrorMessageClass")}
-                    aria-live="polite"
-                    dangerouslySetInnerHTML={{
-                      __html: kcSanitize(messagesPerField.getFirstError("username", "password")),
-                    }}
-                  />
-                )}
+                <PasswordField
+                  id="password"
+                  name="password"
+                  autoComplete="current-password"
+                  label={msgStr("password")}
+                  isInvalid={messagesPerField.existsError("username", "password")}
+                  errorMessage={kcSanitize(messagesPerField.getFirstError("username", "password"))}
+                />
               </div>
 
               <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
@@ -169,52 +142,14 @@ export default function Login(props: PageProps<Extract<KcContext, { pageId: "log
 
               <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
                 <input type="hidden" id="id-hidden-input" name="credentialId" value={auth.selectedCredential} />
-                <input
-                  disabled={isLoginButtonDisabled}
-                  className={kcClsx(
-                    "kcButtonClass",
-                    "kcButtonPrimaryClass",
-                    "kcButtonBlockClass",
-                    "kcButtonLargeClass"
-                  )}
-                  name="login"
-                  id="kc-login"
-                  type="submit"
-                  value={msgStr("doLogIn")}
-                />
+                <Button fullWidth name="login" id="kc-login" isDisabled={isLoginButtonDisabled} type="submit">
+                  {msgStr("doLogIn")}
+                </Button>
               </div>
             </form>
           )}
         </div>
       </div>
     </Template>
-  );
-}
-
-function PasswordWrapper(props: { kcClsx: KcClsx; i18n: I18n; passwordInputId: string; children: JSX.Element }) {
-  const { kcClsx, i18n, passwordInputId, children } = props;
-
-  const { msgStr } = i18n;
-
-  const { isPasswordRevealed, toggleIsPasswordRevealed } = useIsPasswordRevealed({ passwordInputId });
-
-  return (
-    <div className={kcClsx("kcInputGroup")}>
-      {children}
-      <button
-        type="button"
-        className={kcClsx("kcFormPasswordVisibilityButtonClass")}
-        aria-label={msgStr(isPasswordRevealed ? "hidePassword" : "showPassword")}
-        aria-controls={passwordInputId}
-        onClick={toggleIsPasswordRevealed}
-      >
-        <i
-          className={kcClsx(
-            isPasswordRevealed ? "kcFormPasswordVisibilityIconHide" : "kcFormPasswordVisibilityIconShow"
-          )}
-          aria-hidden
-        />
-      </button>
-    </div>
   );
 }
