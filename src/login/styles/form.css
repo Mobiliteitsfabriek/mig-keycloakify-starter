@@ -18,12 +18,7 @@
   position: relative;
 }
 
-.kcLabelClass {
-  color: var(--color-content-tertiary);
-  font-size: var(--text-size-m);
-}
-
 #kc-form-buttons {
-  margin: 0;
+  margin-block-start: var(--space-l);
   display: flex;
 }
